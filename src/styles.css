@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --main-color:#0cc0de;
+    --assis-color:#9662fd;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
