@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './interface.css'
 })
 export class Interface {
-
 }

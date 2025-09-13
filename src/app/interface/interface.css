@@ -1,346 +1,95 @@
-nav.navbar {
-    background-color: var(--background-color);
-    box-shadow: 1px -2px 6px var(--assis-color);
+*{
+    box-sizing: border-box;
 }
-
-
-nav.navbar .btn {
-    border-radius:25px !important;
-    color: var(--text-color);
+.customer-opinions .row .head-p{
+    color: #0B55E5;
+    font-size: 12px;
+    font-weight: 700;
 }
-
-nav.navbar .nav-link {
-    color: var(--text-color) !important;
+.h2-with-opicaty{
+font-size: 52px;
 }
-
-nav.navbar .btn:first-child {
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-}
-
-nav.navbar .btn:first-child:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
-}
-
-nav.navbar .btn:last-child {
-    color: var(--background-color);
-    background-color: var(--text-color);
-}
-
-nav.navbar .btn:last-child:hover {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
-}
-
-nav.navbar .navbar-toggler:focus {
-    box-shadow: none !important;
-}
-
-.hover-underline {
-    display: inline-block;
-    position: relative;
-}
-
-.hover-underline::after {
-    content: '';
+.image img{
     position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--text-color);
-    transform: scaleX(0);
-    transform-origin: center center;
-    transition: transform 0.3s ease-out;
+    top: 50%;
+    right: 17%;
+    transform: translateY(-30%) translateX(-15%); 
+    animation-name: identifier;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2.5s;
 }
-
-.hover-underline:hover::after {
-    transform: scaleX(1);
-}
-
-nav.navbar .fas {
-    width: fit-content;
-}
-
-nav.navbar button.navbar-toggler {
-    color: var(--background-color);
-    border: 2px solid var(--background-color);
-}
-
-nav.navbar ul.navbar-nav {
-    margin-right: 30%;
-}
-
-nav.navbar .navbar-brand img[alt="Logo"] {
-    transform: scale(1.5);
-}
-
-/* End Nav Bar Style  */
-/* Start 3D brain Style */
-
-.heart-section {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    background: var(--background-color);
-    /* background: linear-gradient(0deg, rgba(var(--background-color), 1) 0%, rgba(var(--background-color), 1) 100%); */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    text-align: center;
-    color: var(--text-color);
-}
-
-.heart-img {
-    width: 200px;
-    animation: beat 1s infinite;
-    z-index: 2;
-    /* filter: drop-shadow(0 0 10px); */
-}
-
-@keyframes beat {
-
-    0%,
-    100% {
-        transform: scale(1);
+@keyframes identifier {
+    0%{
+        transform: translateY(-30%) translateX(-15%); 
     }
-
-    50% {
-        transform: scale(1.1);
+    50%{
+        transform: translateY(-30%) translateX(20%); 
+    }
+    100%{
+        transform: translateY(-30%) translateX(-15%); 
     }
 }
-
-.ecg {
-    position: absolute;
-    bottom: 20%;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 3s linear infinite;
-    z-index: 1;
-    opacity: 0.7;
+.customer-opinions .right-side .d-flex{
+    gap: 10px;
 }
-
-.ecg polyline {
-    stroke: #f5f1f1;
-    filter: drop-shadow(0 0 15px #f5f1f1);
-    text-shadow: 0 0 10px #f5f1f1, 0 0 20px #f5f1f1, 0 0 40px #f5f1f1;
-
+/* .customer-opinions .right-side .col-6,.customer-opinions .right-side .col-11{
+    border-radius: 20px;
+} */
+.customer-opinions .right-side .d-flex i{
+    font-size: 30px;
 }
-
-@keyframes draw {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-.intro-title {
-    margin-top: 20px;
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #f5f1f1;
-    text-shadow: 0 0 10px #f5f1f1, 0 0 20px #f5f1f1, 0 0 40px #f5f1f1;
-}
-
-.intro-text {
-    color: #f5f1f1;
+.right-side .col-9 h3{
     font-size: 18px;
-    margin-top: 10px;
-    text-shadow: 0 0 5px #a3bffa;
+    font-weight: 600;
 }
-
-/* End 3D brain Style */
-
-
-/* Start Contact Section Style*/
-#Contact{
-    background: linear-gradient(135deg, #e6f7ff, #ffffff);
-
-}
-#Contact .container img {
-    max-width: 270px;
-    min-width: 100%;
-    display: block;
-    margin: auto;
-}
-
-#Contact .head>p:first-child,
-#Contact .head+div>div:first-child>div p:first-child {
-    color:var(--background-color);
-    text-shadow: 1px 1px 1px var(--background-color);
-}
-
-#Contact .head+p:last-child,
-#Contact .head+div>div:first-child>div p:last-child {
-    color: grey;
-    font-size: 17px;
-}
-.left-side{
-    /* border: 1px solid #f5f1f1;
-    box-shadow: 1px -2px 6px var(--text-color); */
-    padding: 20px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-
+.customer-opinions .right-side .col-11 .icon{
+    transform: translateY(25px);
+    width: 72px;
+    height: 72px;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+    transition: 0.6s;
     
 }
+.customer-opinions .right-side .col-11 .icon i{
 
-#Contact form {
+    color: #0B55E5;
+    position: absolute;
+    left: 7px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    transition: 0.6s;
+    
+}
+.customer-opinions .right-side .col-11:hover .icon{
+    background-color: blueviolet;
+}
+.customer-opinions .right-side .col-11:hover .icon i{
+    color: white;
+}
+.opinions{
+    background-color: #D6D2F1;
+}
+.img-with-opinion{
     gap: 20px;
 }
-
-#Contact form>div:first-child,
-#Contact form>div:nth-child(2) {
-    width: 45%;
-}
-
-#Contact label {
-    margin-bottom: 10px;
-    font-size: 18px;
-    text-align:left;
-}
-
-#Contact input,
-#Contact textarea {
-    border: 0;
-    padding: 6px;
-    border-radius: 10px;
-    background-color:#f5f1f1;
-    opacity: 0.5;
-    outline: 0;
-    border: 1px solid #f5f1f1;
-}
-
-button {
-    font-family: inherit;
-    font-size: 20px;
-    background: var(--background-color);
-    color: var(--text-color);
-    padding: 0.7em 1em;
-    padding-left: 0.9em;
-    display: flex;
-    align-items: center;
+.img-with-opinion img{
     border: none;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.2s;
-    cursor: pointer;
-  }
-  
-  button span {
-    display: block;
-    margin-left: 0.3em;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  button svg {
-    display: block;
-    transform-origin: center center;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  button:hover .svg-wrapper {
-    animation: fly-1 0.6s ease-in-out infinite alternate;
-  }
-  
-  button:hover svg {
-    transform: translateX(1.2em) rotate(45deg) scale(1.1);
-  }
-  
-  button:hover span {
-    transform: translateX(5em);
-  }
-  
-  button:active {
-    transform: scale(0.95);
-  }
-  
-  @keyframes fly-1 {
-    from {
-      transform: translateY(0.1em);
-    }
-  
-    to {
-      transform: translateY(-0.1em);
-    }
-  }
-  
-
-#Contact img+div {
-    gap: 10px;
-}
-
-#Contact img+div>div {
-    gap: 10px;
-    
-}
-
-#Contact img+div>div>div p:first-child {
-    font-size: 20px;
-
-}
-
-#Contact img+div>div>div p {
-    margin-bottom: 0;
-}
-
-#Contact img+div>div span {
-    background-color: var(--background-color);
-    /* opacity: 0.7; */
-    color: var(--text-color);
-    padding: 10px;
     border-radius: 50%;
-    transition: 0.4s ease;
 }
-#Contact img+div>div span p{
-    margin-bottom: 0;
-    color: var(--background-color);
+.directions button{
+    border: 1px solid white;
+    margin-left: 15px;
+    border-radius: 50%;
+    width: 40px;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    transition: 0.6s;
 }
-
-#Contact img+div>div span:hover {
-    opacity: 1;
-}
-
-
-/* media  */
-@media (max-width:992px) {
-    #Contact .row>div:first-child {
-        order: 2;
-
-        & p:first-child {
-            text-align: center;
-        }
-    }
-
-    #Contact .row>div:last-child {
-        order: 1;
-        margin-bottom: 50px;
-
-    }
-
-    #Contact img+div>div {
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    #Contact img+div>div {
-        align-items: center;
-    }
-
-    #Contact img+div {
-        justify-content: center;
-        text-align: center;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
+.directions button:hover{
+    background-color: white;
 }
