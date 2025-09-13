@@ -7,5 +7,5 @@ import { Component , Input } from '@angular/core';
   styleUrl: './doctor-card.css'
 })
 export class DoctorCard {
-   @Input() doctor: any;
+   @Input() doctor: any; 
 }
