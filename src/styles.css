@@ -5,7 +5,9 @@
     --background-color:#131147;
     --text-color:#f5f1f1;
 }
-
+body {
+    font-family: "Libre Franklin", sans-serif;
+}
 a{
     text-decoration: none;
     color: inherit;
