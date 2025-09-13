@@ -9,6 +9,9 @@
     --blackColor:#020D2B;
     --mainColor: #9588E8;
 }
+body {
+    font-family: "Libre Franklin", sans-serif;
+}
 a{
     text-decoration: none;
     color: inherit;
