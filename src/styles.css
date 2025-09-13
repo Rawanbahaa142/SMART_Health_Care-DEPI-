@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
-    --main-color:#0cc0de;
-    --assis-color:#9662fd;
+    /* --main-color:#0cc0de;
+    --assis-color:#9662fd; */
     --background-color:#131147;
     --text-color:#f5f1f1;
+    --cards-color:#D7ECE4;
+    
 }
 
 a{
@@ -15,4 +17,7 @@ ul{
 }
 .d-flex{
     display: flex;
+}
+html{
+    scroll-behavior: smooth;
 }
