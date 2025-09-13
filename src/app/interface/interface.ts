@@ -4,7 +4,21 @@ import { Component } from '@angular/core';
   selector: 'app-interface',
   standalone: false,
   templateUrl: './interface.html',
-  styleUrl: './interface.css'
+  styleUrls: ['./interface.css'],
 })
 export class Interface {
+<<<<<<< HEAD
+=======
+  doctors = [
+    { imgUrl: 'doctor1.jpg', name: 'Dr. Jonathon Ronan', jobTitle: 'Cardiologist' },
+    { imgUrl: 'doctor2.jpg', name: 'Dr. Walter White', jobTitle: 'Cardiologist' },
+    { imgUrl: 'doctor3.jpg', name: 'Dr. Victor James', jobTitle: 'Cardiologist , Orthopedist' },
+    { imgUrl: 'doctor5.jpg', name: 'Dr. Philips Rownd', jobTitle: 'Cardiologist , Gynocologist' },
+    {
+      imgUrl: 'doctor9.jpg',
+      name: 'Dr. Jane Ronan',
+      jobTitle: 'Cardiologist , Nutritionist , Orthopedist',
+    },
+  ];
+>>>>>>> b80486d7970976227c7b02ce371e4cdc444a66ad
 }
