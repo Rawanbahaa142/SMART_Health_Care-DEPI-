@@ -1,0 +1,8 @@
+footer {
+    /*background-color:  #131147;*/
+    background-color: var(--background-color);
+
+}
+.footer-bottom {
+    background:#C4DCF3
+}
