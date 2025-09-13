@@ -1,23 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
 :root{
     /* --main-color:#0cc0de;
     --assis-color:#9662fd; */
     --background-color:#131147;
     --text-color:#f5f1f1;
     --cards-color:#D7ECE4;
-    
+    --optionColor:#0B55E5;
+    --optionalColorTwo: #F82828;
+    --blackColor:#020D2B;
+    --mainColor: #9588E8;
 }
-
 a{
     text-decoration: none;
     color: inherit;
 }
-ul{
-    list-style: none;
+.shared-section-theme{
+    padding: 5% 3%;
 }
-.d-flex{
-    display: flex;
+
+.shared-head{
+ margin: 3% 0;
+ text-align: center;
+ 
+
+ & p:first-child{
+    color: var(--optionColor);
+    font-weight: bold;
+    text-transform: capitalize;
+ }
+ & p:last-child{
+    width: 46%;
+    display: inline-block;
+    color: var(--blackColor);
+    font-size: 3rem;
+    & span{
+        font-weight: bolder;
+    }
+ }
 }
-html{
-    scroll-behavior: smooth;
-}
+
+@media (max-width:1100px) and (min-width:769px){
+.shared-head{
+
+ & p:last-child{
+   width: 70%;
+ }
+}}
+
+@media (max-width:768px){
+.shared-head{
+ & p:last-child{
+   width: 100%;
+    font-size: 1.6rem;
+ }
+}}

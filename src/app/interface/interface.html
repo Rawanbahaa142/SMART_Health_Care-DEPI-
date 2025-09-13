@@ -17,3 +17,144 @@
   </div>
 </section>
 <!-- End Bannner -->
+<!-- Start Doctors Section -->
+<section class="our-doctors shared-section-theme">
+  <div class="shared-head">
+    <p>DOCTORS</p>
+    <p class="h1">Our Experts Doctors <span>For The Patients</span> </p>
+  </div>
+
+  <ul class="nav nav-tabs" id="doctorTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="cardiology-tab" data-bs-toggle="tab" data-bs-target="#cardiology"
+        type="button" role="tab">
+        Cardiologist
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="orthopedics-tab" data-bs-toggle="tab" data-bs-target="#orthopedics" type="button"
+        role="tab">
+        Orthopedist
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition" type="button"
+        role="tab">
+        Nutritionist
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="Gynocologist-tab" data-bs-toggle="tab" data-bs-target="#Gynocologist" type="button"
+        role="tab">
+        Gynocologist
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3">
+
+    <div class="tab-pane fade show active" id="cardiology" role="tabpanel">
+      <div id="carouselCardiology" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              @for (doctor of doctors; track $index)
+              {
+                @if (doctor.jobTitle.includes('Cardiologist')){
+              <div class="col-md-3">
+                <app-doctor-card [doctor]="doctor"></app-doctor-card>
+              </div>
+              }}
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCardiology" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselCardiology" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="orthopedics" role="tabpanel">
+      <div id="carouselOrthopedics" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+               @for (doctor of doctors; track $index)
+              {
+                @if (doctor.jobTitle.includes('Orthopedist')){
+              <div class="col-md-3">
+                <app-doctor-card [doctor]="doctor"></app-doctor-card>
+              </div>
+              }}
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOrthopedics" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselOrthopedics" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="nutrition" role="tabpanel">
+      <div id="carouselNutrition" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              @for (doctor of doctors; track $index)
+              {
+                @if (doctor.jobTitle.includes('Nutritionist')){
+              <div class="col-md-3">
+                <app-doctor-card [doctor]="doctor"></app-doctor-card>
+              </div>
+              }}
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselNutrition" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselNutrition" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="Gynocologist" role="tabpanel">
+      <div id="carouselGynocologist" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              @for (doctor of doctors; track $index)
+              {
+              @if (doctor.jobTitle.includes('Gynocologist')){
+              <div class="col-md-3">
+                <app-doctor-card [doctor]="doctor"></app-doctor-card>
+              </div>
+              }}
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGynocologist" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGynocologist" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End Doctors Section -->
+
