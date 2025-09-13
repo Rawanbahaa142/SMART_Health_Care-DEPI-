@@ -1,15 +1,17 @@
 <div class="card">
-<div class="doctor-pic"> 
-    <img [src]="doctor.imgUrl"  [alt]="'Doctor ' + doctor.name">
-     <div>
-        <a href="" class="d-flex">
-            <span ><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
-            <span>Book An Appointment</span>
-        </a>
-     </div>
-</div>
- <div class="doctor-info">
-    <p class="h3"><a href="">{{doctor.name}}</a></p>
-    <p>{{doctor.jobTitle}}</p>
- </div>
+  <div class="doctor-pic">
+    <img [src]="doctor.imgUrl" [alt]="'Doctor ' + doctor.name" />
+    <div>
+      <a href="" class="d-flex">
+        <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+        <span>Book An Appointment</span>
+      </a>
+    </div>
+  </div>
+  <div class="doctor-info">
+    <p class="h3">
+      <a href="">{{ doctor.name }}</a>
+    </p>
+    <p>{{ doctor.jobTitle }}</p>
+  </div>
 </div>
