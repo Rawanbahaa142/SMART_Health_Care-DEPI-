@@ -6,15 +6,17 @@ import { Interface } from './interface/interface';
 import { Navbar } from './navbar/navbar';
 import { DoctorCard } from './doctor-card/doctor-card';
 import { NgbCarouselModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
->>>>>>> ec64f04612fc9ea3a3b07163368e62adb91d13e4
-
+import { Button } from './shared/button/button';
+import { Footer } from './shared/footer/footer';
 @NgModule({
   declarations: [
     App,
     Navbar,
     Interface,
-    DoctorCard
->>>>>>> ec64f04612fc9ea3a3b07163368e62adb91d13e4
+    DoctorCard,
+    Button,
+    Footer
+
   ],
   imports: [
     BrowserModule,

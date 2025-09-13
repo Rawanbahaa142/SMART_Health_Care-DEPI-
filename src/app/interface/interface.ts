@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-interface',
   standalone: false,
   templateUrl: './interface.html',
-  styleUrls: ['./interface.css']
+  styleUrls: ['./interface.css'],
 })
 export class Interface {
   doctors = [
@@ -12,6 +12,10 @@ export class Interface {
     { imgUrl: 'doctor2.jpg', name: 'Dr. Walter White', jobTitle: 'Cardiologist' },
     { imgUrl: 'doctor3.jpg', name: 'Dr. Victor James', jobTitle: 'Cardiologist , Orthopedist' },
     { imgUrl: 'doctor5.jpg', name: 'Dr. Philips Rownd', jobTitle: 'Cardiologist , Gynocologist' },
-    { imgUrl: 'doctor9.jpg', name: 'Dr. Jane Ronan', jobTitle: 'Cardiologist , Nutritionist , Orthopedist' }
+    {
+      imgUrl: 'doctor9.jpg',
+      name: 'Dr. Jane Ronan',
+      jobTitle: 'Cardiologist , Nutritionist , Orthopedist',
+    },
   ];
 }
