@@ -8,7 +8,6 @@ import { Navbar } from './navbar/navbar';
 import { DoctorCard } from './doctor-card/doctor-card';
 import { NgbCarouselModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Button } from './shared/button/button';
-import { Footer } from './shared/footer/footer';
 @NgModule({
   declarations: [
     App,
