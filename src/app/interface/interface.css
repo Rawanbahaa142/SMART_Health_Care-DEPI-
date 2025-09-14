@@ -43,7 +43,16 @@
 .our-doctors ul.nav.nav-tabs li button:hover{
     background-color: #C4DCF3;
 }
-
+.tag {
+    background-color: #C4DCF3;
+    bottom: 20px !important;
+    left: 10px !important;
+}
+.tag:hover {
+    background-color: var(--mainColor);
+    color:#fff;
+    transition:all 0.3s ease;
+}
 
 @media (max-width:992px) {
     .our-doctors ul.nav.nav-tabs li button{
