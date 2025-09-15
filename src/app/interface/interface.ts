@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./interface.css'],
 })
 export class Interface {
-<<<<<<< HEAD
-=======
   doctors = [
     { imgUrl: 'doctor1.jpg', name: 'Dr. Jonathon Ronan', jobTitle: 'Cardiologist' },
     { imgUrl: 'doctor2.jpg', name: 'Dr. Walter White', jobTitle: 'Cardiologist' },
@@ -20,5 +18,4 @@ export class Interface {
       jobTitle: 'Cardiologist , Nutritionist , Orthopedist',
     },
   ];
->>>>>>> b80486d7970976227c7b02ce371e4cdc444a66ad
 }
