@@ -17,6 +17,7 @@ font-size: 52px;
     animation-timing-function: linear;
     animation-duration: 2.5s;
 }
+<<<<<<< HEAD
 @keyframes identifier {
     0%{
         transform: translateY(-30%) translateX(-15%); 
@@ -26,6 +27,44 @@ font-size: 52px;
     }
     100%{
         transform: translateY(-30%) translateX(-15%); 
+=======
+.our-doctors ul.nav.nav-tabs li {
+    border: 0;
+    background-color: #fff;   
+}
+.our-doctors ul.nav.nav-tabs li button{
+    padding: 0.4rem 1.5rem;
+    width: 100%;
+    height: 100%;
+    border: 0 !important;
+    color: var(--blackColor);
+    border-radius: 20px;
+    border: 1px solid #C4DCF3 !important;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+.our-doctors ul.nav.nav-tabs li .active{
+    background-color: #C4DCF3;
+}
+.our-doctors ul.nav.nav-tabs li button:hover{
+    background-color: #C4DCF3;
+}
+.tag {
+    background-color: #C4DCF3;
+    bottom: 20px !important;
+    left: 10px !important;
+}
+.tag:hover {
+    background-color: var(--mainColor);
+    color:#fff;
+    transition:all 0.3s ease;
+}
+
+@media (max-width:992px) {
+    .our-doctors ul.nav.nav-tabs li button{
+        padding: 3px;
+        font-size: 13px;
+>>>>>>> d1dab5b0f0c9cfeba533b1433e6027ccf7b1b7c0
     }
 }
 .customer-opinions .right-side .d-flex{
