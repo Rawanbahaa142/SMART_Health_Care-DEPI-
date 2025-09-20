@@ -11,6 +11,7 @@ import { Button } from './shared/button/button';
 import { ReadmoreButton } from './shared/readmore-button/readmore-button';
 import { FAQ } from './faq/faq';
 import { Scroller } from './shared/scroller/scroller';
+import { Articles } from './articles/articles';
 @NgModule({
   declarations: [
     App,
@@ -21,7 +22,8 @@ import { Scroller } from './shared/scroller/scroller';
     Footer,
     ReadmoreButton,
     FAQ,
-    Scroller
+    Scroller,
+    Articles
 
   ],
   imports: [
