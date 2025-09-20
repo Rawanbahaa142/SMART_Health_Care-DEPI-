@@ -1,74 +1,28 @@
-.customer-opinions .row .head-p{
-    color: #0B55E5;
-    font-size: 12px;
-    font-weight: 700;
-}
-.h2-with-opicaty{
-font-size: 52px;
-}
-.rounded-card{
-    border-radius: 15px;
-}
-.image img{
-    position: absolute;
-    top: 50%;
-    right: 17%;
-    transform: translateY(-30%) translateX(-15%); 
-    animation-name: identifier;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 2.5s;
-}
-@keyframes identifier {
-    0%{
-        transform: translateY(-30%) translateX(-15%); 
-    }
-    50%{
-        transform: translateY(-30%) translateX(20%); 
-    }
-    100%{
-        transform: translateY(-30%) translateX(-15%); 
-    }}
-
-
-.our-doctors ul.nav.nav-tabs {
-    border: 0;
-    background-color: #fff;
-    gap: 10px;   
-}
-.our-doctors ul.nav.nav-tabs li button{
-    padding: 0.4rem 1.5rem;
-    width: 100%;
-    height: 100%;
-    border: 0 !important;
-    color: var(--blackColor);
-    border-radius: 20px;
-    border: 1px solid #C4DCF3 !important;
-    text-transform: uppercase;
-    transition: 0.3s ease;
+/* Start Bannner Style */
+.banner {
+    padding: 5% 10px 0;
+    position: relative;
+    background-image: url('/banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.our-doctors ul.nav.nav-tabs li .active{
-    background-color: #C4DCF3;
+.text-dark {
+    color: #0d1b2a !important;
 }
-.our-doctors ul.nav.nav-tabs li button:hover{
-    background-color: #C4DCF3;
+
+.text-secondary {
+    color: #666 !important;
 }
-.tag {
-    background-color: #C4DCF3;
-    bottom: 20px !important;
-    left: 10px !important;
+.banner .right-content img{
+    max-width: 500px;
 }
-.tag:hover {
-    background-color: var(--mainColor);
-    color:#fff;
-    transition:all 0.3s ease;
-}
-.our-doctors .tab-content{
-    padding: 0 4%;
-}
+
+/* End Bannner Style */
+
+/* start Doctor Section */
 .our-doctors {
-    & [data-bs-slide="next"] , [data-bs-slide="prev"] {
+     & [data-bs-slide="next"] , [data-bs-slide="prev"] {
     background-color: #fff;
     border: 1px solid var(--mainColor);
     height: 40px;
@@ -83,25 +37,81 @@ font-size: 52px;
         color: #fff;
         background-color: var(--mainColor);
     }
+
 }
-@media (max-width:992px) {
-    .our-doctors ul.nav.nav-tabs li button{
-        padding: 3px;
-        font-size: 13px;
-    }
-    .image img{
-        display: none;
-    }
-    .h2-with-opicaty{
-  font-size: 35px;
+.our-doctors ul.nav.nav-tabs{
+ justify-content: center;
+ gap: 10px;
+ border: 0 !important;
 }
+.our-doctors ul.nav.nav-tabs li {
+    border: 0;
+    background-color: #fff;   
+}
+.our-doctors ul.nav.nav-tabs li button{
+    padding: 0.4rem 1.5rem;
+    width: 100%;
+    height: 100%;
+    border: 0 !important;
+    color: var(--blackColor);
+    border-radius: 20px;
+    border: 1px solid #C4DCF3 !important;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+.our-doctors ul.nav.nav-tabs li .active{
+    background-color: #C4DCF3;
+}
+.our-doctors ul.nav.nav-tabs li button:hover{
+    background-color: #C4DCF3;
+}
+
+/* End Doctor Section */
+
+/* Start Customer Opinions Section */
+.interface-container{
+    padding: 5%;
+}
+.customer-opinions .row .head-p{
+    color: var(--optionColor);
+    font-size: 12px;
+    font-weight: 700;
+}
+.customer-opinions .h2-with-opicaty{
+font-size: 52px;
+}
+.customer-opinions .rounded-card{
+    border-radius: 20px;
+}
+.customer-opinions .row {
+    position: relative;
+}
+.customer-opinions .image img{
+    position: absolute;
+    top: 25%;
+    right: 9%;
+    transform: translateY(-30%) translateX(-15%); 
+    animation-name: identifier;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2.5s;
+}
+
+@keyframes identifier {
+    0%{
+        transform: translateY(-30%) translateX(-15%); 
+    }
+    50%{
+        transform: translateY(-30%) translateX(20%); 
+    }
+    100%{
+        transform: translateY(-30%) translateX(-15%); 
+    }
 }
 .customer-opinions .right-side .d-flex{
     gap: 10px;
 }
-/* .customer-opinions .right-side .col-6,.customer-opinions .right-side .col-11{
-    border-radius: 20px;
-} */
+
 .customer-opinions .right-side .d-flex i{
     font-size: 30px;
 }
@@ -109,32 +119,25 @@ font-size: 52px;
     font-size: 18px;
     font-weight: 600;
 }
-.customer-opinions .right-side .col-11 .icon{
-    transform: translateY(25px);
-    width: 72px;
-    height: 72px;
+.customer-opinions .right-side .col-sm-11 .icon{
     background-color: white;
-    border-radius: 50px;
-    position: relative;
+    padding: 10px;
+    border-radius: 50%;
     transition: 0.6s;
-    
 }
-.customer-opinions .right-side .col-11 .icon i{
-
-    color: #0B55E5;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50% , -50%);
-    font-size: 2rem;
+.customer-opinions .right-side .col-sm-11 .icon i{
+   color: var(--optionColor);
     transition: 0.6s;
-    
+    font-size: 2.4em;
 }
-.customer-opinions .right-side .col-11:hover .icon{
-    background-color: blueviolet;
+.customer-opinions .right-side .col-sm-11:hover .icon{
+    background-color: var(--mainColor);
 }
-.customer-opinions .right-side .col-11:hover .icon i{
+.customer-opinions .right-side .col-sm-11:hover .icon i{
     color: white;
+}
+.customer-opinions  .sentence p{
+    color: var(--mainColor);;
 }
 .opinions{
     background-color: #D6D2F1;
@@ -145,6 +148,8 @@ font-size: 52px;
 .img-with-opinion img{
     border: none;
     border-radius: 50%;
+    width: 70px;
+    height: 70px;
 }
 .directions button{
     border: 1px solid white;
@@ -158,7 +163,68 @@ font-size: 52px;
 .directions button:hover{
     background-color: white;
 }
-.sentence p:first-child{
+/* End Customer Opinions Section */
+
+
+/* start blog */
+.blog .tag{
+    background-color:#C4DCF3;
+    left: 5px;
+    bottom: 5px;
+    transition: 0.5s ease;
     font-size: 13px;
-    color: var(--mainColor);
 }
+.blog .tag:hover{
+    color: #fff;
+    background-color: var(--mainColor);
+}
+.blog .card-body span{
+    font-size: 14px;
+    color: grey;
+}
+/* end blog */
+
+
+/* start media Query */
+
+@media (max-width:992px) {
+    .our-doctors ul.nav.nav-tabs li button{
+        padding: 3px;
+        font-size: 13px;
+    }
+    .banner .right-content img{
+    max-width: 350px;
+    }
+    .customer-opinions .image img{
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .banner .right-content{
+     text-align: center;
+     width: 100%;
+      & img{
+     width: 100%;
+    }  
+    }
+    .customer-opinions .h2-with-opicaty{
+        font-size: 24px;
+    }
+    
+
+}
+@media (max-width:500px){
+    .img-with-opinion{
+        flex-wrap: wrap;
+    }
+    .img-with-opinion .directions {
+        width: 100%;
+    }
+    .customer-opinions .right-side>div:last-child >div{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* end Media Query */

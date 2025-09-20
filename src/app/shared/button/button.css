@@ -86,3 +86,9 @@
   height: 220px;
   opacity: 1;
 }
+
+@media (max-width :768px) {
+  .animated-button{
+    padding: 10px 30px;
+  }
+}

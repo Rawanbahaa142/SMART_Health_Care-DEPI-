@@ -4,10 +4,11 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Interface } from './interface/interface';
 import { Footer } from './shared/footer/footer';
-import { Navbar } from './navbar/navbar';
-import { DoctorCard } from './doctor-card/doctor-card';
+import { Navbar } from './shared/navbar/navbar';
+import { DoctorCard } from './shared/doctor-card/doctor-card';
 import { NgbCarouselModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Button } from './shared/button/button';
+import { ReadmoreButton } from './shared/readmore-button/readmore-button';
 @NgModule({
   declarations: [
     App,
@@ -15,7 +16,8 @@ import { Button } from './shared/button/button';
     Interface,
     DoctorCard,
     Button,
-    Footer
+    Footer,
+    ReadmoreButton
 
   ],
   imports: [
