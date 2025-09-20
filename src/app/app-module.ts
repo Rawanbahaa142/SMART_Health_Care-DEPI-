@@ -23,7 +23,9 @@ import { Articles } from './articles/articles';
     Footer,
     ReadmoreButton,
     FAQ,
-    Scroller
+    Scroller,
+    Articles,
+    ContactPage
 
   ],
   imports: [
