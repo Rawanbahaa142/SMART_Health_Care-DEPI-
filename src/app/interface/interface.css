@@ -5,7 +5,7 @@
     background-image: url('/banner-bg.jpg');
     background-size: cover;
     background-attachment: fixed;
-    background-position: center right;    
+    background-position: center right;
 }
 
 .text-dark {
@@ -20,6 +20,110 @@
 }
 
 /* End Bannner Style */
+
+/* Start About Hospo */
+/* Start About Hospo */
+
+:host {
+  --primary: #0b2545;
+  --muted: #6b7b8a;
+  --accent: #7c63ff;
+  --mint: #e6f7f1;
+  --lavender: #efe7ff;
+}
+
+.about-hospa {
+  .display-5 { color: var(--primary); }
+  .lead { color: var(--muted); }
+
+  .lists li {
+    padding: 8px 0;
+    font-weight: 600;
+    color: #133046;
+    .check {
+      color: #59b987;
+      font-size: 1.05rem;
+      margin-top: 2px;
+    }
+  }
+
+  .btn-purple {
+    background: linear-gradient(135deg, var(--accent), #9e83ff);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 6px 18px rgba(124,99,255,0.18);
+  }
+
+  .image-card {
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .rounded-custom {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+    object-fit: cover;
+  }
+
+
+  .stat-card {
+    width: 180px;
+    height: 180px;
+    border-radius: 70px;
+    padding: 5%;
+    position: absolute;
+    text-align: center;
+    background: white;
+  }
+
+  .stat-top {
+    right:27px ;
+    top: 10px;
+    background: linear-gradient(180deg, #f0eaff, #efe7ff);
+    border-radius: 20px;
+  }
+
+  .stat-bottom {
+    left: 25px;
+    bottom: 0px;
+    background: linear-gradient(180deg, #e9f6f0, #dff1ea);
+    border-radius: 18px;
+  }
+
+  .stat-number {
+    font-weight: 800;
+    color: #0b2545;
+  }
+
+  .stat-label {
+    color: #5f6b73;
+    line-height: 1;
+    margin-top: 6px;
+  }
+
+  @media (max-width: 991px) {
+    .stat-top {
+      right: 12px;
+      top: -6px;
+      transform: scale(0.92);
+    }
+    .stat-bottom {
+      left: 12px;
+      bottom: -6px;
+      transform: scale(0.92);
+    }
+  }
+}
+
+
+/* End About Hospo */
+/* End About Hospo */
 
 /* start Doctor Section */
 .our-doctors {
@@ -47,7 +151,7 @@
 }
 .our-doctors ul.nav.nav-tabs li {
     border: 0;
-    background-color: #fff;   
+    background-color: #fff;
 }
 .our-doctors ul.nav.nav-tabs li button{
     padding: 0.4rem 1.5rem;
@@ -91,7 +195,7 @@ font-size: 52px;
     position: absolute;
     top: 25%;
     right: 9%;
-    transform: translateY(-30%) translateX(-15%); 
+    transform: translateY(-30%) translateX(-15%);
     animation-name: identifier;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -100,13 +204,13 @@ font-size: 52px;
 
 @keyframes identifier {
     0%{
-        transform: translateY(-30%) translateX(-15%); 
+        transform: translateY(-30%) translateX(-15%);
     }
     50%{
-        transform: translateY(-30%) translateX(20%); 
+        transform: translateY(-30%) translateX(20%);
     }
     100%{
-        transform: translateY(-30%) translateX(-15%); 
+        transform: translateY(-30%) translateX(-15%);
     }
 }
 .customer-opinions .right-side .d-flex{
@@ -207,12 +311,12 @@ font-size: 52px;
      width: 100%;
       & img{
      width: 100%;
-    }  
+    }
     }
     .customer-opinions .h2-with-opicaty{
         font-size: 24px;
     }
-    
+
 
 }
 @media (max-width:500px){
