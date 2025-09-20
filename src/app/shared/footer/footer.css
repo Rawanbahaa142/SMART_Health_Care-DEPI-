@@ -1,10 +1,11 @@
-footer {
-padding: 5%;
-   background-color: var(--background-color);
+footer{
+    background-color: #020D2B ;
+    color: lightgrey;
+    padding:3% 0;
 }
-.footer-bottom {
-    background:#C4DCF3
-}
-ul{
-    list-style: none;
+footer a:hover { 
+    color: #fff !important; 
+     }
+footer .list-unstyled .text-decoration-none:hover{
+    text-decoration: underline !important;
 }

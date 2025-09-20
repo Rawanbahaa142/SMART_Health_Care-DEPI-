@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<section class="phonecall ">
+   <div class="faq-banner">
+    <img src="/bg23.jpg" alt="Doctors">
+   </div>
+   <div class="phone d-flex justify-content-between align-items-start">
+  <div>
+    <p class="h1">Frequently Asked Questions <span class="fw-bold">(FAQ)</span></p>
+    <div class="d-flex">
+        <span><a routerLink="/interface">Home</a></span>
+        <span>></span>
+        <span>FAQs</span>
+    </div>
+  </div>
+
+   <div class="call">
+    <span><i class="fas fa-phone-volume"></i></span>
+    <span>CALL : <a href="tel:+201033452865" class="fw-bold"> +201033452865</a></span>
+   </div>
+   </div>
+</section>
+
+<section class="questions align-items-start justify-content-center">
+  @for (question of faqList; track $index) {
+    <div [class.active]="question.show" (click)="question.show = !question.show">
+      <div class="d-flex align-items-center">
+        <span class="d-flex justify-content-center"><i class="fas" [ngClass]="question.show ? 'fa-minus' : 'fa-plus'"></i></span>
+        <p class="h6">{{question.question}}</p>
+      </div>
+      <p class="answer">{{question.answer}}</p>
+    </div>
+  }
+</section>
+<!-- 
+<section class="form ">
+    <div class="head">
+        <p class="h2">Haven't Found Your Answers? <span class="fw-bold">Ask Here</span></p>
+        <p>our email address will not be published. Required fields are marked*</p>
+    </div>
+   <div>
+     <form action="https://formspree.io/f/xwpngake" method="post">
+      <div>
+        <label for="msg" >Your Message*</label>
+        <textarea name="Message" id="msg" required></textarea>
+      </div>
+
+      <div>
+        <label for="name">Name*</label>
+        <input type="text" id="name" required name="username">
+      </div>
+
+       <div>
+        <label for="email">Email*</label>
+        <input type="email" id="email" required name="email">
+      </div>
+       
+      <div>
+        <input type="radio" name="I agree" id="confirm">
+        <label for="confirm">I agree with the terms</label>
+      </div>
+    </form>
+   </div>
+</section> -->
+<app-scroller></app-scroller>
+<app-footer></app-footer>
