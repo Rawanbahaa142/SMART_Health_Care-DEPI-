@@ -1,8 +1,11 @@
-footer {
-    /*background-color:  #131147;*/
-    background-color: var(--background-color);
-
+footer{
+    background-color: #020D2B ;
+    color: lightgrey;
+    padding:3% 0;
 }
-.footer-bottom {
-    background:#C4DCF3
+footer a:hover { 
+    color: #fff !important; 
+     }
+footer .list-unstyled .text-decoration-none:hover{
+    text-decoration: underline !important;
 }

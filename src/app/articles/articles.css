@@ -1,0 +1,17 @@
+/* start blog */
+.blog .tag{
+    background-color:#C4DCF3;
+    left: 5px;
+    bottom: 5px;
+    transition: 0.5s ease;
+    font-size: 13px;
+}
+.blog .tag:hover{
+    color: #fff;
+    background-color: var(--mainColor);
+}
+.blog .card-body span{
+    font-size: 14px;
+    color: grey;
+}
+/* end blog */

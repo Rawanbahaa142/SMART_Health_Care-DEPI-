@@ -12,7 +12,7 @@
     & img + div {
       position: absolute;
       background-color: #fff;
-      border: 2px solid var(--optionalColorTwo);
+      border: 1px solid var(--optionalColorTwo);
       color: var(--optionalColorTwo);
       width: 90%;
       padding: 7px 5px;

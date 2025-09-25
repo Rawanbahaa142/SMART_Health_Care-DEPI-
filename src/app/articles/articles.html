@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+@for(article of articles ; track $index) {
+<div class="col-md-4 col-lg-4 col-sm-12">
+        <div class="card border-0">
+          <div class="position-relative">
+            <img src="/{{article.imageUrl}}" class="card-img-top rounded" alt="..." />
+            <div class="tag rounded-pill px-4 py-2 text-capitalize position-absolute" style="bottom: 10px;background: #dff1ea;left: 10px;">
+              {{article.tag}}
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="mb-2 d-block">January 29, 2025 - 4 MINS READ</span>
+            <h5 class="card-title">
+              {{article.title}}
+            </h5>
+            <app-readmore-button></app-readmore-button>
+          </div>
+        </div>
+      </div>
+    }
+    </div>
+    </div>
