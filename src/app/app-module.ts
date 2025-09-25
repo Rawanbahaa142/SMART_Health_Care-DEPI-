@@ -8,6 +8,7 @@ import { Navbar } from './shared/navbar/navbar';
 import { DoctorCard } from './shared/doctor-card/doctor-card';
 import { NgbCarouselModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Button } from './shared/button/button';
+import { Services } from './services/services';
 import { ReadmoreButton } from './shared/readmore-button/readmore-button';
 import { FAQ } from './faq/faq';
 import { Scroller } from './shared/scroller/scroller';
@@ -23,6 +24,7 @@ import { provideHttpClient } from '@angular/common/http';
     DoctorCard,
     Button,
     Footer,
+    Services,
     ReadmoreButton,
     FAQ,
     Scroller,
