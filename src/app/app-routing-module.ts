@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Interface } from './interface/interface';
 import { FAQ } from './faq/faq';
+import { Services } from './services/services';
 
 const routes: Routes = [
   { path: '', component: Interface },
   { path: 'FAQ', component: FAQ },
   { path: 'interface', component: Interface },
+  {path:'services',component:Services},
 ];
 
 @NgModule({

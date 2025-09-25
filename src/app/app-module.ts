@@ -22,7 +22,7 @@ import { Articles } from './articles/articles';
     DoctorCard,
     Button,
     Footer,
-    Services
+    Services,
     ReadmoreButton,
     FAQ,
     Scroller,

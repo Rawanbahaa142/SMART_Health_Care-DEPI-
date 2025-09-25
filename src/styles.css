@@ -8,6 +8,21 @@
     --optionalColorTwo: #F82828;
     --blackColor:#020D2B;
     --mainColor: #9588E8;
+     --medical-primary: #2563eb;
+    --medical-primary-light: #60a5fa;
+    --medical-secondary: #10b981;
+    --medical-secondary-light: #34d399;
+    --medical-dark: #1e293b;
+    --medical-gray: #64748b;
+    --medical-light-gray: #f8fafc;
+    --text-purple: #8b5cf6;
+    --gradient-hero: linear-gradient(135deg, var(--medical-primary), var(--medical-primary-light));
+    --gradient-card: linear-gradient(135deg, #ffffff, #f8fafc);
+    --gradient-accent: linear-gradient(135deg, var(--medical-secondary), var(--medical-secondary-light));
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
     font-family: "Libre Franklin", sans-serif;
@@ -23,7 +38,7 @@ a{
 .shared-head{
  margin: 3% 0;
  text-align: center;
- 
+
 
  & p:first-child{
     color: var(--optionColor);
