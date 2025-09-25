@@ -8,6 +8,7 @@ import { Navbar } from './navbar/navbar';
 import { DoctorCard } from './doctor-card/doctor-card';
 import { NgbCarouselModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { Button } from './shared/button/button';
+import { Services } from './services/services';
 @NgModule({
   declarations: [
     App,
@@ -15,7 +16,8 @@ import { Button } from './shared/button/button';
     Interface,
     DoctorCard,
     Button,
-    Footer
+    Footer,
+    Services
 
   ],
   imports: [
