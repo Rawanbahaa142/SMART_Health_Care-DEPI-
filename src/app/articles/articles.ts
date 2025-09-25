@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
+import { ArticlesService } from '../services/articles-service';
 
 @Component({
   selector: 'app-articles',
@@ -7,19 +8,23 @@ import { Component } from '@angular/core';
   styleUrl: './articles.css'
 })
 export class Articles {
-    articles =[{
-      imageUrl : 'blog1-3-800x530.jpg',
-      tag: 'maternity',
-      title: "How to prepare for your baby's arrival a checklist for expectant parents"
-    },
-  {
-      imageUrl : 'blog2-3-800x530.jpg',
-      tag: 'maternity',
-      title: "Caring for yourself postpartum what every new mom should know"
-    },
-  {
-      imageUrl : 'blog1-2-800x530.jpg',
-      tag: 'Psychiatric',
-      title: "The importance of self-care in managing stress"
-    }]
+  articles: any[]=[];
+   search='';
+   category='All';
+  constructor(private articleService: ArticlesService){
+    this.articles=this.articleService.getArticles(this.search);
+  }
+  showArticles(){
+    if(this.category==='All'){
+     this.articles=this.articleService.getArticles(this.search);
+    }else{
+      this.articles=this.articleService.getArticlesbyCategory(this.category, this.search);
+    }
+    console.log(this.articles);
+  }
+
+  returnTostart(){
+   this.search='';
+   this.showArticles();
+  }
 }

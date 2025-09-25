@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './faq.css'
 })
 export class FAQ {
+  success=false;
+  fail=false;
+  dataSubmited=false;
+  msgcontent='';
+  
+  data={
+    userMsg :null,
+    userName :null,
+    useremail:null
+  }
 faqList=[
  { 
     question: "How do I create a new account on the website?",
@@ -69,4 +80,31 @@ faqList=[
     show:false
   }
 ]
+
+constructor(private http :HttpClient)
+{}
+submitData(){
+
+  // if(this.data.userMsg !=='' && this.data.userName!=='' && this.data.useremail!=='' &&
+    
+  // )
+  this.http.post('https://formspree.io/f/xwpngake' , this.data).subscribe({
+    next:()=>{
+      this.success=true;
+      this.fail=false;
+      this.msgcontent="Your message has been sent!";
+    }
+    ,
+    error :()=>{
+      this.success=false;
+      this.fail=true;
+      this.msgcontent="Make sure you 're connected to the internet and git it another shot."
+    }
+  })
+   this.dataSubmited=true;
+}
+closeMsg(){
+    this.dataSubmited=false;
+};
+
 }

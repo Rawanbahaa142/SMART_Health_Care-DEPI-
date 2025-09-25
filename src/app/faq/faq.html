@@ -1,65 +1,96 @@
 <app-navbar></app-navbar>
-<section class="phonecall ">
-   <div class="faq-banner">
-    <img src="/bg23.jpg" alt="Doctors">
-   </div>
-   <div class="phone d-flex justify-content-between align-items-start">
-  <div>
-    <p class="h1">Frequently Asked Questions <span class="fw-bold">(FAQ)</span></p>
-    <div class="d-flex">
+<section class="phonecall">
+  <div class="faq-banner">
+    <img src="/bg23.jpg" alt="Doctors" />
+  </div>
+  <div class="phone d-flex justify-content-between align-items-start">
+    <div>
+      <p class="h1">Frequently Asked Questions <span class="fw-bold">(FAQ)</span></p>
+      <div class="d-flex">
         <span><a routerLink="/interface">Home</a></span>
         <span>></span>
         <span>FAQs</span>
+      </div>
+    </div>
+
+    <div class="call">
+      <span><i class="fas fa-phone-volume"></i></span>
+      <span>CALL : <a href="tel:+201033452865" class="fw-bold"> +201033452865</a></span>
     </div>
   </div>
-
-   <div class="call">
-    <span><i class="fas fa-phone-volume"></i></span>
-    <span>CALL : <a href="tel:+201033452865" class="fw-bold"> +201033452865</a></span>
-   </div>
-   </div>
 </section>
 
 <section class="questions align-items-start justify-content-center">
   @for (question of faqList; track $index) {
-    <div [class.active]="question.show" (click)="question.show = !question.show">
-      <div class="d-flex align-items-center">
-        <span class="d-flex justify-content-center"><i class="fas" [ngClass]="question.show ? 'fa-minus' : 'fa-plus'"></i></span>
-        <p class="h6">{{question.question}}</p>
-      </div>
-      <p class="answer">{{question.answer}}</p>
+  <div [class.active]="question.show" (click)="question.show = !question.show">
+    <div class="d-flex align-items-center">
+      <span class="d-flex justify-content-center"
+        ><i class="fas" [ngClass]="question.show ? 'fa-minus' : 'fa-plus'"></i
+      ></span>
+      <p class="h6">{{ question.question }}</p>
     </div>
+    <p class="answer">{{ question.answer }}</p>
+  </div>
   }
 </section>
-<!-- 
-<section class="form ">
-    <div class="head">
-        <p class="h2">Haven't Found Your Answers? <span class="fw-bold">Ask Here</span></p>
-        <p>our email address will not be published. Required fields are marked*</p>
-    </div>
-   <div>
-     <form action="https://formspree.io/f/xwpngake" method="post">
+
+<section class="form">
+  <div class="head">
+    <p class="h2">Haven't Found Your Answers? <span class="fw-bold">Ask Here</span></p>
+    <p>our email address will not be published. Required fields are marked*</p>
+  </div>
+  <div>
+    <form (submit)="submitData()" method="post">
       <div>
-        <label for="msg" >Your Message*</label>
-        <textarea name="Message" id="msg" required></textarea>
+        <label for="msg">Your Message*</label>
+        <textarea name="Message" id="msg" [(ngModel)]="data.userMsg" required></textarea>
       </div>
 
       <div>
         <label for="name">Name*</label>
-        <input type="text" id="name" required name="username">
+        <input type="text" id="name"  name="username" [(ngModel)]="data.userName" />
       </div>
 
-       <div>
-        <label for="email">Email*</label>
-        <input type="email" id="email" required name="email">
-      </div>
-       
       <div>
-        <input type="radio" name="I agree" id="confirm">
+        <label for="email">Email*</label>
+        <input type="email" id="email"  name="email" [(ngModel)]="data.useremail" />
+      </div>
+
+      <div class="d-flex align-items-center" style="gap: 10px; margin-top: 20px">
+        <input type="radio" name="I agree" id="confirm" style="width: fit-content"  />
         <label for="confirm">I agree with the terms</label>
       </div>
+
+      <button type="submit">
+        <a class="btn mt-2">
+          <span>
+            <i class="bi bi-arrow-right"></i>
+          </span>
+          <span>Send Message Now</span></a
+        >
+      </button>
+
+      <div>
+        @if(dataSubmited){
+        <div [ngClass]="{'success-box':success, 'fail-box':!success}">
+          <div class="icon">
+            <i class="fas " [ngClass]="{'fa-check':success, 'fa-sad-cry':!success}"></i>
+          </div>
+          <div class="message">
+            <h4 [innerHTML]="msgcontent"></h4>
+            @if(success){
+               <p>Thanks for contacting us. We will reply as soon as we can.</p>
+            }
+          </div>
+
+        <div class="close-btn" (click)="closeMsg()">
+        <i class="fas fa-times"></i>
+         </div>
+        </div>
+        }
+      </div>
     </form>
-   </div>
-</section> -->
+  </div>
+</section>
 <app-scroller></app-scroller>
 <app-footer></app-footer>

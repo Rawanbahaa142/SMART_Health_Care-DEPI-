@@ -13,6 +13,8 @@ import { FAQ } from './faq/faq';
 import { Scroller } from './shared/scroller/scroller';
 import { ContactPage } from './contact-page/contact-page';
 import { Articles } from './articles/articles';
+import { FormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [
     App,
@@ -33,9 +35,11 @@ import { Articles } from './articles/articles';
     AppRoutingModule,
     NgbCarouselModule,
     NgbNavModule,
+    FormsModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })

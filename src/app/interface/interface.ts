@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit } from '@angular/core';
+import { ArticlesService } from '../services/articles-service';
 
 @Component({
   selector: 'app-interface',
@@ -7,6 +8,20 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./interface.css'],
 })
 export class Interface implements OnInit, OnDestroy {
+  articles: any[]=[];
+  search='';
+  doctors = [
+    { imgUrl: 'doctor1.jpg', name: 'Dr. Jonathon Ronan', jobTitle: 'Cardiologist' },
+    { imgUrl: 'doctor2.jpg', name: 'Dr. Walter White', jobTitle: 'Cardiologist' },
+    { imgUrl: 'doctor3.jpg', name: 'Dr. Victor James', jobTitle: 'Cardiologist , Orthopedist' },
+    { imgUrl: 'doctor5.jpg', name: 'Dr. Philips Rownd', jobTitle: 'Cardiologist , Gynocologist' },
+    {
+      imgUrl: 'doctor9.jpg',
+      name: 'Dr. Jane Ronan',
+      jobTitle: 'Cardiologist , Nutritionist , Orthopedist',
+    },
+  ];
+
   sectionsTarget = 22;
   patientReviewsTarget = 5000;
 
@@ -20,6 +35,10 @@ export class Interface implements OnInit, OnDestroy {
 
   duration = 1200;
 
+  
+  constructor(private articleService: ArticlesService){
+    this.articles=this.articleService.getArticles(this.search);
+  }
   ngOnInit(): void {
     this.sectionsCurrent = 0;
     this.patientReviewsCurrent = 0;
@@ -75,15 +94,6 @@ export class Interface implements OnInit, OnDestroy {
     }
     return String(n);
   }
-  doctors = [
-    { imgUrl: 'doctor1.jpg', name: 'Dr. Jonathon Ronan', jobTitle: 'Cardiologist' },
-    { imgUrl: 'doctor2.jpg', name: 'Dr. Walter White', jobTitle: 'Cardiologist' },
-    { imgUrl: 'doctor3.jpg', name: 'Dr. Victor James', jobTitle: 'Cardiologist , Orthopedist' },
-    { imgUrl: 'doctor5.jpg', name: 'Dr. Philips Rownd', jobTitle: 'Cardiologist , Gynocologist' },
-    {
-      imgUrl: 'doctor9.jpg',
-      name: 'Dr. Jane Ronan',
-      jobTitle: 'Cardiologist , Nutritionist , Orthopedist',
-    },
-  ];
+  
+
 }
