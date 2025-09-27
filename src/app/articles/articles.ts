@@ -25,6 +25,7 @@ export class Articles {
 
   returnTostart(){
    this.search='';
+   this.category='All';
    this.showArticles();
   }
 }
