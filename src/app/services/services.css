@@ -18,8 +18,8 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(37, 99, 235, 0.6));
-    z-index: 1;
+    background: linear-gradient(135deg, rgb(211 204 222), rgb(235 234 239 / 0%));
+        z-index: 1;
 }
 
 .hero-title {
@@ -32,7 +32,7 @@ html {
     opacity: 0.95;
 }
 
-.text-medical-primary { color: var(--medical-primary) !important; }
+.text-medical-primary { color: var(--background-color) !important; }
 .text-medical-secondary { color: var(--medical-secondary) !important; }
 .text-medical-dark { color: var(--medical-dark) !important; }
 .text-medical-gray { color: var(--medical-gray) !important; }
@@ -154,7 +154,7 @@ html {
 .stats-icon {
     width: 64px;
     height: 64px;
-    background: var(--gradient-accent);
+    background: var(--mainColor);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -168,7 +168,7 @@ html {
 }
 
 .cta-section {
-    background: var(--gradient-hero);
+     background-color: #020D2B ;
     position: relative;
 }
 

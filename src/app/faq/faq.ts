@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-faq',
@@ -16,7 +17,8 @@ export class FAQ {
   data={
     userMsg :null,
     userName :null,
-    useremail:null
+    useremail:null,
+    agreeTerms:null
   }
 faqList=[
  { 
@@ -83,25 +85,24 @@ faqList=[
 
 constructor(private http :HttpClient)
 {}
-submitData(){
-
-  // if(this.data.userMsg !=='' && this.data.userName!=='' && this.data.useremail!=='' &&
-    
-  // )
-  this.http.post('https://formspree.io/f/xwpngake' , this.data).subscribe({
+submitData(form : NgForm){
+  if(form.valid && form.submitted){
+    this.dataSubmited=true;
+     this.http.post('https://formspree.io/f/xwpngake' , this.data).subscribe({
     next:()=>{
       this.success=true;
       this.fail=false;
       this.msgcontent="Your message has been sent!";
+
     }
     ,
     error :()=>{
       this.success=false;
       this.fail=true;
-      this.msgcontent="Make sure you 're connected to the internet and git it another shot."
+      this.msgcontent="Make sure you 're connected to the internet and git it another shot.";
     }
   })
-   this.dataSubmited=true;
+  } 
 }
 closeMsg(){
     this.dataSubmited=false;

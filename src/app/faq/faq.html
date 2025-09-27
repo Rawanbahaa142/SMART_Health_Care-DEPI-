@@ -40,26 +40,26 @@
     <p>our email address will not be published. Required fields are marked*</p>
   </div>
   <div>
-    <form (submit)="submitData()" method="post">
+    <form (ngSubmit)="submitData(formAsk)" method="post" #formAsk="ngForm">
       <div>
         <label for="msg">Your Message*</label>
-        <textarea name="Message" id="msg" [(ngModel)]="data.userMsg" required></textarea>
+        <textarea name="Message" id="msg" #Message required [(ngModel)]="data.userMsg" required></textarea>
       </div>
 
       <div>
         <label for="name">Name*</label>
-        <input type="text" id="name"  name="username" [(ngModel)]="data.userName" />
+        <input type="text" id="name" name="username"  #name required [(ngModel)]="data.userName" />
       </div>
 
       <div>
         <label for="email">Email*</label>
-        <input type="email" id="email"  name="email" [(ngModel)]="data.useremail" />
+        <input type="email" id="email"  name="email" #email email  required [(ngModel)]="data.useremail" />
       </div>
 
       <div class="d-flex align-items-center" style="gap: 10px; margin-top: 20px">
-        <input type="radio" name="I agree" id="confirm" style="width: fit-content"  />
-        <label for="confirm">I agree with the terms</label>
-      </div>
+      <input type="checkbox" name="Iagree" id="confirm" #Iagree required style="width: fit-content"  [(ngModel)]="data.agreeTerms" />
+      <label for="confirm">I agree with the terms</label>
+       </div>
 
       <button type="submit">
         <a class="btn mt-2">
@@ -70,6 +70,9 @@
         >
       </button>
 
+     @if(formAsk.invalid && formAsk.submitted){
+        <div class="alert alert-danger my-1">Make sure you full all fields with right data.</div>
+        }@else{
       <div>
         @if(dataSubmited){
         <div [ngClass]="{'success-box':success, 'fail-box':!success}">
@@ -89,6 +92,7 @@
         </div>
         }
       </div>
+    }
     </form>
   </div>
 </section>
