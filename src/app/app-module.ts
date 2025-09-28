@@ -16,6 +16,9 @@ import { ContactPage } from './contact-page/contact-page';
 import { Articles } from './articles/articles';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
+import { Main } from './dashboard/main/main';
+import { Nav } from './dashboard/nav/nav';
+import { LeftNav } from './dashboard/left-nav/left-nav';
 @NgModule({
   declarations: [
     App,
@@ -29,7 +32,10 @@ import { provideHttpClient } from '@angular/common/http';
     FAQ,
     Scroller,
     Articles,
-    ContactPage
+    ContactPage,
+    Main,
+    Nav,
+    LeftNav
 
   ],
   imports: [
