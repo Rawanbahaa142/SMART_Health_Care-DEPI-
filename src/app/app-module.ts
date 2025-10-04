@@ -16,6 +16,7 @@ import { ContactPage } from './contact-page/contact-page';
 import { Articles } from './articles/articles';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
+import { UserProfile } from './User/user-profile/user-profile';
 @NgModule({
   declarations: [
     App,
@@ -29,7 +30,8 @@ import { provideHttpClient } from '@angular/common/http';
     FAQ,
     Scroller,
     Articles,
-    ContactPage
+    ContactPage,
+    UserProfile
 
   ],
   imports: [
@@ -37,7 +39,8 @@ import { provideHttpClient } from '@angular/common/http';
     AppRoutingModule,
     NgbCarouselModule,
     NgbNavModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
