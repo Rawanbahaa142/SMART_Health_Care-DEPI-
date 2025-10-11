@@ -1,0 +1,93 @@
+<div class="dashboard-container">
+  <div class="dash-container">
+    <div class="row justify-content-center">
+
+      <div class="appointments-info col-lg-8 col-12 row justify-content-center justify-content-lg-start">
+
+        <div class="col-12 my-2 d-flex justify-content-center align-items-center flex-wrap p-3 welcome-section">
+          <div class="welcome-user flex-grow-1 text-center text-lg-start">
+            <p class="h4 mb-1">Hello, <span class="color-warning">Emma</span></p>
+            <p class="fs-8 text-muted mb-3">
+              Have a nice day and don't forget to take care of your health!
+            </p>
+            <button routerLink="/profile" class="btn">My profile</button>
+          </div>
+          <div class="user-avatar text-center mt-3 mt-lg-0">
+            <img class="w-100" src="/1000190846-removebg-preview.png" alt="UserAvatar" />
+          </div>
+        </div>
+
+        <div class="cards col-12 row justify-content-sm-start justify-content-center">
+          <div class="card">
+            <div>
+              <span><i class="fas fa-calendar-alt"></i></span>
+              <span>15</span>
+            </div>
+            <div><p>Total Appointments</p></div>
+          </div>
+
+          <div class="card">
+            <div>
+              <span><i class="fas fa-calendar-plus"></i></span>
+              <span>3</span>
+            </div>
+            <div><p>Upcoming visits</p></div>
+          </div>
+
+          <div class="card">
+            <div>
+              <span><i class="fa fa-calendar-check"></i></span>
+              <span>12</span>
+            </div>
+            <div><p>Total past visits</p></div>
+          </div>
+        </div>
+
+        <div class="Upcoming-appointments my-3 w-100">
+          <div class="appointemnts-head mb-3">
+            <p class="h2 fs-4 mb-1">Upcoming Appointments</p>
+            <p class="text-muted mb-0">Your scheduled visits with healthcare providers</p>
+          </div>
+
+          <div class="app-cards d-flex flex-column">
+            <div class="app-card d-flex justify-content-between align-items-center">
+              <div class="app-details">
+                <p class="h6 mb-0">Dr.Sara Wilson</p>
+                <p class="text-muted">Cardiologist</p>
+                <p class="text-muted">Tomorrow at 10:00 AM</p>
+              </div>
+              <button class="text-muted">Details</button>
+            </div>
+
+            <div class="app-card d-flex justify-content-between align-items-center">
+              <div class="app-details">
+                <p class="h6 mb-0">Dr.Michael Chen</p>
+                <p class="text-muted">General Practitioner</p>
+                <p class="text-muted">May 15, 2025 at 2:30 PM</p>
+              </div>
+              <button class="text-muted">Details</button>
+            </div>
+
+            <div class="app-card d-flex justify-content-between align-items-center">
+              <div class="app-details">
+                <p class="h6 mb-0">Dr.Emily Rodriguez</p>
+                <p class="text-muted">Dermatologist</p>
+                <p class="text-muted">May 20, 2025 at 11:15 AM</p>
+              </div>
+              <button class="text-muted">Details</button>
+            </div>
+
+            <div routerLink="/appotements" class="d-flex all-app">
+              <p><i class="fa fa-chevron-circle-right"></i></p>
+              <p class="mx-1">See All Appointments</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="appointment-right col-lg-4 col-12">
+         
+      </div>
+    </div>
+  </div>
+</div>

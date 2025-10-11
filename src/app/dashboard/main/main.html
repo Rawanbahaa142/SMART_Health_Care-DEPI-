@@ -1,0 +1,68 @@
+<div class="container-fluid" class="dasboard">
+    <div class="row" style="height:100%">
+        <div class="col-md-3">
+            <app-left-nav></app-left-nav>
+        </div>
+        <div class="col-md-9">
+            <app-nav></app-nav>
+            <div class="row pt-4">
+                <div class="col-md-8">
+                    <div class="d-flex doctor-information">
+                    <div class="card me-4 shadow">
+                        <div class="card-body text-center">
+                            <img width="150px" class="rounded-circle border my-4" src="avatar.png">
+                            <h5 class="card-title mb-2">Doctor Name</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">+20 1001762553</h6>
+                            <p class="card-text">doctor@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="card shadow">
+                        <div class="card-body px-4 py-2">
+                            <h5 class="card-title my-4">General Information</h5>
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <th>Date Of Birth</th>
+                                    <td class="text-center">06/08/1955</td>
+                                </tr>
+                                <tr>
+                                    <th>Address</th>
+                                    <td class="text-center">183 Maple Street , New York</td>
+                                </tr>
+                                <tr>
+                                    <th>Registration Date</th>
+                                    <td class="text-center">28/09/2025</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="d-flex mt-4">
+                        <div class="card shadow flex-grow-1">
+                            <div class="card-body">
+                            <ul class="nav nav-fill nav-underline" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Future Visits</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Past Visits</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</div>

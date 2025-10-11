@@ -16,7 +16,11 @@ import { ContactPage } from './contact-page/contact-page';
 import { Articles } from './articles/articles';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
-import { UserProfile } from './User/user-profile/user-profile';
+import { Main } from './dashboard/main/main';
+import { Nav } from './dashboard/nav/nav';
+import { LeftNav } from './dashboard/left-nav/left-nav';
+import { Dashboard } from './User/Pages/dashboard/dashboard';
+import { Usernav } from './User/Shared/usernav/usernav';
 @NgModule({
   declarations: [
     App,
@@ -31,8 +35,11 @@ import { UserProfile } from './User/user-profile/user-profile';
     Scroller,
     Articles,
     ContactPage,
-    UserProfile
-
+    Main,
+    Nav,
+    LeftNav,
+    Dashboard,
+    Usernav,
   ],
   imports: [
     BrowserModule,
