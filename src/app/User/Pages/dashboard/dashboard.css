@@ -46,8 +46,8 @@
   border-radius: 20px;
   box-shadow: 1px 2px 5px var(--mainColor);
   transition: 0.3s ease;
-  color: #fff;
-  background: linear-gradient(to bottom, var(--background-color), var(--mainColor), #ee91f7);
+  color: var(--background-color);
+  background: #fff;
 }
 
 .cards .card > div {
@@ -59,7 +59,7 @@
   display: inline-block;
   border-radius: 10px;
   font-size: 15px;
-  background-color: #fff;
+ background-color: #e8b7ee88;
   color: var(--background-color);
 }
 
@@ -67,7 +67,7 @@
   margin: 10px;
   font-weight: bold;
   font-size: 18px;
-  color: #fff;
+  color: var(--background-color);
 }
 
 .cards .card p {
@@ -75,13 +75,13 @@
 }
 
 .cards .card:hover {
-  background: #fff;
-  color: #690069;
+  background: linear-gradient(to bottom, var(--background-color), var(--mainColor), #ee91f7);
+  color: #fff;
   transform: translateY(-10px);
 }
 
 .cards .card:hover span {
-  color: #690069;
+  color: #fff;
 }
 
 .cards .card:hover span:first-child {
@@ -180,4 +180,56 @@
     padding: 3%;
   }
 }
+.appointment-right{
+  gap: 10px;
+}
 
+.health-tips{
+  padding: 3%;
+    & img{
+      width: 200px;
+      align-self: end;
+    }
+    & .speech-bubble{
+      padding: 10px;
+      border-radius: 10px 30px;
+      width: 70%;
+      font-size: 15px;
+      color: #fff;
+        background: linear-gradient(90deg, #690069, var(--mainColor),var(--background-color));
+
+    }
+}
+.pubbles{
+  position: relative;
+  & div{
+    background: #fff;
+    box-shadow: 1px 1px 5px gray;
+    position: absolute;
+    border-radius: 50%;
+  }
+    & div:first-of-type{
+      width: 30px;
+      height: 30px;
+      top: 10px;
+      left: 10px;
+    }
+     & div:nth-child(2){
+      width: 20px;
+      height: 20px;
+      top: 30px;
+      left: 50px;
+    }
+    & div:last-of-type{
+      width: 10px;
+      height: 10px;
+      top: 40px;
+      left: 80px;
+    }
+}
+.gradient-text {                 
+  background: linear-gradient(90deg, #690069, var(--mainColor),var(--background-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

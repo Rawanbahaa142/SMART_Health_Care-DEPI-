@@ -21,6 +21,12 @@ import { Nav } from './dashboard/nav/nav';
 import { LeftNav } from './dashboard/left-nav/left-nav';
 import { Dashboard } from './User/Pages/dashboard/dashboard';
 import { Usernav } from './User/Shared/usernav/usernav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatDatepickerModule } from '@angular/material/datepicker'; // موديول الـ Datepicker
+import { MatNativeDateModule } from '@angular/material/core'; // موديول لدعم التواريخ بشكل Native
+import { MatFormFieldModule } from '@angular/material/form-field'; // لو حبيت تحطي Input حول الـ Datepicker
+import { MatInputModule } from '@angular/material/input'; // لو حبيت تستخدم Input
+import { MatCardModule } from '@angular/material/card'; // Card لتغليف التقويم
 @NgModule({
   declarations: [
     App,
@@ -47,6 +53,12 @@ import { Usernav } from './User/Shared/usernav/usernav';
     NgbCarouselModule,
     NgbNavModule,
     FormsModule,
+    MatSlideToggleModule ,
+     MatDatepickerModule, // لازم عشان الـ Datepicker يشتغل
+    MatNativeDateModule, // لدعم أنواع التاريخ
+    MatFormFieldModule, // لو عايزة تحطي Input مع الـ Datepicker
+    MatInputModule,      // لو عايزة Input
+    MatCardModule        // لو عايزة Card تحوي الـ calendar
     
   ],
   providers: [

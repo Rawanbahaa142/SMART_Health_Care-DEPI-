@@ -1,6 +1,5 @@
 :root{
-    /* --main-color:#0cc0de;
-    --assis-color:#9662fd; */
+
     --background-color:#131147;
     --text-color:#f5f1f1;
     --cards-color:#D7ECE4;
@@ -101,3 +100,6 @@ a{
     font-size: 1.6rem;
  }
 }}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

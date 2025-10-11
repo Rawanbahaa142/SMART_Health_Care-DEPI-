@@ -4,7 +4,7 @@
 
       <div class="appointments-info col-lg-8 col-12 row justify-content-center justify-content-lg-start">
 
-        <div class="col-12 my-2 d-flex justify-content-center align-items-center flex-wrap p-3 welcome-section">
+        <div class="col-12 my-2 d-flex justify-content-center align-items-center  p-3 welcome-section">
           <div class="welcome-user flex-grow-1 text-center text-lg-start">
             <p class="h4 mb-1">Hello, <span class="color-warning">Emma</span></p>
             <p class="fs-8 text-muted mb-3">
@@ -79,14 +79,42 @@
 
             <div routerLink="/appotements" class="d-flex all-app">
               <p><i class="fa fa-chevron-circle-right"></i></p>
-              <p class="mx-1">See All Appointments</p>
+              <p class="mx-1 gradient-text">See All Appointments</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="appointment-right col-lg-4 col-12">
-         
+      <div class="appointment-right col-lg-4 col-12 d-flex flex-sm-row align-items-center flex-lg-column  flex-column">
+      <div class="col-lg-12 col-sm-6 col-10">
+         <mat-card >
+      <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+     </mat-card>
+      <!--  related to the day i select from calender -->
+        <div class="app-card d-flex justify-content-between align-items-center my-3">
+              <div class="app-details">
+                <p class="h6 mb-0">Dr.Sara Wilson</p>
+                <p class="text-muted">Cardiologist</p>
+                <p class="text-muted">Tomorrow at 10:00 AM</p>
+              </div>
+              <button class="text-muted">Details</button>
+        </div>
+      </div>
+
+    <div class="health-tips col-lg-12 col-sm-6 col-10">
+  <div class="daily-tip-container d-flex flex-column">
+    <div class="speech-bubble">
+      <span><i class="fa-solid fa-tint"></i></span>
+      <p>Drink 8 glasses of water daily to stay healthy</p>
+    </div>
+    <div class="pubbles">
+      <div class="bubble-one"></div>
+      <div class="bubble-two"></div>
+      <div class="bubble-three"></div>
+    </div>
+    <img src="/1000190846-removebg-preview.png" alt="Doctor Character" class="doctor-avatar" />
+  </div>
+   </div>
       </div>
     </div>
   </div>
