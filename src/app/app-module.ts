@@ -27,7 +27,8 @@ import { MatNativeDateModule } from '@angular/material/core'; // موديول ل
 import { MatFormFieldModule } from '@angular/material/form-field'; // لو حبيت تحطي Input حول الـ Datepicker
 import { MatInputModule } from '@angular/material/input'; // لو حبيت تستخدم Input
 import { MatCardModule } from '@angular/material/card';
-import { Doctors } from './User/Pages/doctors/doctors'; // Card لتغليف التقويم
+import { Doctors } from './User/Pages/doctors/doctors';
+import { OneArticle } from './one-article/one-article'; // Card لتغليف التقويم
 @NgModule({
   declarations: [
     App,
@@ -48,6 +49,7 @@ import { Doctors } from './User/Pages/doctors/doctors'; // Card لتغليف ا�
     Dashboard,
     Usernav,
     Doctors,
+    OneArticle,
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,14 @@
 .card {
   border: 0;
   text-align: center;
+  font-size: 13px;
   & .doctor-pic {
     position: relative;
 
     & img {
       width: 100%;
       border-radius: 25px;
+      height: 200px;
     }
 
     & img + div {
@@ -14,8 +16,8 @@
       background-color: #fff;
       border: 1px solid var(--optionalColorTwo);
       color: var(--optionalColorTwo);
-      width: 90%;
-      padding: 7px 5px;
+      width:90%;
+      padding:7px 3px;
       border-radius: 25px;
       bottom: 10px;
       left: 50%;
@@ -32,7 +34,12 @@
         border-radius: 50%;
         background-color: var(--optionalColorTwo);
         border: 1px solid var(--optionalColorTwo);
+        font-size: 5px;
         color: #fff;
+        
+      }
+       & span:nth-child(2) {
+       font-size: 12px;
       }
     }
 
@@ -45,6 +52,7 @@
         color: var(--optionalColorTwo);
         transition: 0.5s ease;
       }
+     
     }
   }
   & .doctor-info {
@@ -56,4 +64,14 @@
   & .doctor-info p:first-child:hover {
     color: var(--mainColor);
   }
+}
+@media (max-width:765px) {
+  .card{
+   & .doctor-pic {
+      & img + div {
+        width: 60%;
+        padding: 10px 3px;
+      }
+   }
+}
 }

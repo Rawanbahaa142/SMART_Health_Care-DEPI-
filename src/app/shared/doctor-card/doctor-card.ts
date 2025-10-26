@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class DoctorCard {
   @Input() doctor: any;
+  @Input() fontSize:any;
 }

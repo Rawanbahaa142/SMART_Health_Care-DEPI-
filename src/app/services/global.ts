@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ArticlesService {
+export class Global {
    articles= [
   {
     id: 1,
@@ -16,13 +16,9 @@ export class ArticlesService {
     content: `
       Telemedicine is rapidly changing the way patients and doctors interact. 
       Instead of traveling to hospitals or clinics, patients can consult with healthcare professionals from their homes using video calls and specialized apps.
-
       This approach has proven especially useful during the COVID-19 pandemic, where remote consultations helped reduce the risk of infection and kept hospitals from becoming overcrowded.
-
       Remote monitoring devices, such as smartwatches and blood pressure monitors, are now integrated with telemedicine platforms, allowing doctors to track chronic conditions like diabetes and hypertension in real-time.
-
       Despite the benefits, telemedicine also comes with challenges such as ensuring data privacy, internet accessibility in rural areas, and maintaining the same level of trust as in-person visits.
-
       Nevertheless, experts agree that telemedicine will continue to grow and become a permanent part of modern healthcare.
     `
   },
@@ -811,15 +807,38 @@ export class ArticlesService {
   }
 ];
 
- getArticles(searchValue:string){
-  // console.log(searchValue , this.articles);
-  
-  return this.articles.filter(article => 
-    (article.title.includes(searchValue) || article.summary.includes(searchValue) || article.content
-     .includes(searchValue) || article.category.includes(searchValue)));
- }
+  doctors = [
+    { imgUrl: 'doctor1.jpg', name: 'Dr. Jonathon Ronan', jobTitle: 'Cardiologist' , country:'Egypt'},
+    { imgUrl: 'doctor2.jpg', name: 'Dr. Walter White', jobTitle: 'Cardiologist' ,country:'USA'},
+    { imgUrl: 'doctor3.jpg', name: 'Dr. Victor James', jobTitle: 'Cardiologist , Orthopedist', country:'Japan' },
+    { imgUrl: 'doctor5.jpg', name: 'Dr. Philips Rownd', jobTitle: 'Cardiologist , Gynocologist', country:'Barsil' },
+    {
+      imgUrl: 'doctor9.jpg',
+      name: 'Dr. Jane Ronan',
+      jobTitle: 'Cardiologist , Nutritionist , Orthopedist',
+      country:'India'
+    },
+    { imgUrl: 'doctor1.jpg', name: 'Dr. Jonathon Ronan', jobTitle: 'Cardiologist' , country:'Egypt'},
+    { imgUrl: 'doctor2.jpg', name: 'Dr. Walter White', jobTitle: 'Cardiologist' ,country:'USA'},
+    { imgUrl: 'doctor3.jpg', name: 'Dr. Victor James', jobTitle: 'Cardiologist , Orthopedist', country:'Japan' },
+    { imgUrl: 'doctor5.jpg', name: 'Dr. Philips Rownd', jobTitle: 'Cardiologist , Gynocologist', country:'Barsil' },
+    {
+      imgUrl: 'doctor9.jpg',
+      name: 'Dr. Jane Ronan',
+      jobTitle: 'Cardiologist , Nutritionist , Orthopedist',
+      country:'India'
+    }
+  ];
+
  getArticlesbyCategory(category:string , searchValue:string){
-  return this.articles.filter(article => article.category.includes(category) && (article.title.includes(searchValue) || article.summary.includes(searchValue) || article.content
-     .includes(searchValue) || article.category.includes(searchValue)));
+  return this.articles.filter(article => article.category.includes(category) &&
+   (article.title.includes(searchValue) || article.summary.includes(searchValue) || article.content
+     .includes(searchValue) ));
+ }
+
+  getDoctors(name:string , jobTitle:string , country :string){
+  return this.doctors.filter(doctor => 
+    (doctor.name.includes(name) && doctor.jobTitle.includes(jobTitle) && doctor.country.includes(country))
+  );
  }
 }

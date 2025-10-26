@@ -270,9 +270,11 @@ font-size: 52px;
  text-align: center;
  cursor: pointer;
  border-radius: 10px;
+ transition: 0.3s ease;
 }
 .for-blog:hover{
-    color: var(--medical-gray) ;
+    color: #fff ;
+    background: linear-gradient(to right, var(--background-color), var(--mainColor), #ee91f7);
 }
 .stat-top{
      background: linear-gradient(180deg, #f0eaff, #efe7ff);

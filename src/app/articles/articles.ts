@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output, output } from '@angular/core';
-import { ArticlesService } from '../services/articles-service';
+import { Component } from '@angular/core';
+import {  Global } from '../services/global';
 
 @Component({
   selector: 'app-articles',
@@ -11,15 +11,11 @@ export class Articles {
   articles: any[]=[];
    search='';
    category='All';
-  constructor(private articleService: ArticlesService){
-    this.articles=this.articleService.getArticles(this.search);
+  constructor(private global: Global){
+    this.articles=this.global.getArticlesbyCategory(this.category,this.search);
   }
   showArticles(){
-    if(this.category==='All'){
-     this.articles=this.articleService.getArticles(this.search);
-    }else{
-      this.articles=this.articleService.getArticlesbyCategory(this.category, this.search);
-    }
+    this.articles=this.global.getArticlesbyCategory(this.category, this.search);
     console.log(this.articles);
   }
 
