@@ -6,15 +6,18 @@ import { Articles } from './articles/articles';
 import { Services } from './services/services';
 import { Main } from './dashboard/main/main';
 import { Dashboard } from './User/Pages/dashboard/dashboard';
+import { Login } from './login/login';
 
 const routes: Routes = [
-{path:'', component:Interface}  ,
-{path:'FAQ', component:FAQ},
-{path:'interface' , component:Interface},
-{path:'articles', component:Articles},
-{path:'services' , component:Services},
-{path: 'doctors-dashboard' , component : Main},
-{path:'dashboard' , component:Dashboard}
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  // { path: '', component: Interface },
+  { path: 'FAQ', component: FAQ },
+  { path: 'interface', component: Interface },
+  { path: 'articles', component: Articles },
+  { path: 'services', component: Services },
+  { path: 'doctors-dashboard', component: Main },
+  { path: 'dashboard', component: Dashboard },
+  { path: 'login', component: Login },
 ];
 
 @NgModule({
