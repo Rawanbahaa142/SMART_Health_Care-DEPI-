@@ -9,8 +9,8 @@ import { Dashboard } from './User/Pages/dashboard/dashboard';
 import { Login } from './login/login';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  // { path: '', component: Interface },
+  // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', component: Interface },
   { path: 'FAQ', component: FAQ },
   { path: 'interface', component: Interface },
   { path: 'articles', component: Articles },

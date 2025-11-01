@@ -18,7 +18,7 @@ export class Login {
 
   onSubmit() {
     if (this.email === this.validEmail && this.password === this.validPassword) {
-      this.router.navigate(['/interface']);
+      this.router.navigate(['/dashboard']);
     } else {
       alert('Invalid email or password');
     }
