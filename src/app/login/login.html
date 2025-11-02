@@ -1,0 +1,44 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5 col-lg-4">
+      <div class="card shadow-sm border-0 p-4">
+        <div class="text-center mb-4">
+          <h4 class="fw-bold">Hello! Welcome Back <span class="text-warning">✋</span></h4>
+        </div>
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label class="form-label text-muted small">Enter Your Email First</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="email@example.com"
+              [(ngModel)]="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-muted small">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="••••••••"
+              [(ngModel)]="password"
+              name="password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary w-100 rounded-pill" (click)="onSubmit()">
+            Login
+          </button>
+          <div class="text-center mt-3">
+            <small
+              >Don't have an account?
+              <a href="#" class="text-primary text-decoration-none">Register</a></small
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
