@@ -1,0 +1,46 @@
+<div class="container-fluid dasboard">
+    <div class="row" style="height:100%">
+        <div class="col-md-3 ps-0">
+            <app-left-nav></app-left-nav>
+        </div>
+        <div class="col-md-9">
+            <app-nav></app-nav>
+            <div class="row my-3">
+                <div class="col-md-8">
+                    <h3 class="fw-medium">Patients</h3>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control" [(ngModel)]="searchTerm" (ngModelChange)="getfilteredPatient()" placeholder="Search by name or phone number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Phone Number</th>
+                            <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for(patient of filtered ; track $index){
+                                <tr>
+                                    <td>{{patient.name}}</td>
+                                    <td>{{patient.age}}</td>
+                                    <td>{{patient.gender}}</td>
+                                    <td>{{patient.phone}}</td>
+                                    <td>
+                                        <button class="btn btn-outline-success" routerLink=""><i class="fa-solid fa-pen-to-square"></i></button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

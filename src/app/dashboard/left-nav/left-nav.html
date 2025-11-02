@@ -1,10 +1,11 @@
 <div class="left-nav shadow">
     <div class="text-center">
-        <img src="logo.healthCare.png" style="max-width:170px" alt="logo">
+        <a routerLink="/doctors-dashboard"><img src="logo.healthCare.png" style="max-width:170px" alt="logo"></a>
     </div>
     <ul class="px-5 text-white list-unstyled">
+        <li class="py-2"><a routerLink="/doctors-dashboard"><i class="fa-solid fa-calendar pe-4"></i> Dashboard</a></li>
         <li class="py-2"><i class="fa-solid fa-calendar pe-4"></i> Schedule</li>
-        <li class="py-2"><i class="fa-solid fa-users pe-4"></i> Patients</li>
+        <li class="py-2"><a routerLink="/doctors-dashboard/patients"><i class="fa-solid fa-users pe-4"></i> Patients</a></li>
         <li class="py-2"><i class="fa-solid fa-calendar-days pe-4"></i> Scheduled Visits</li>
     </ul>
     
