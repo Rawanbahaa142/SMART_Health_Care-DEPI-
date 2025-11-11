@@ -7,6 +7,8 @@ import { Services } from './services/services';
 import { Main } from './dashboard/main/main';
 import { Dashboard } from './User/Pages/dashboard/dashboard';
 import { Login } from './login/login';
+
+import { SignUp } from './sign-up/sign-up';
 import { Patients } from './dashboard/patients/patients';
 
 const routes: Routes = [
@@ -27,7 +29,7 @@ const routes: Routes = [
 {path: 'doctors-dashboard' , component : Main},
 {path: 'doctors-dashboard/patients' , component : Patients},
 {path:'dashboard' , component:Dashboard},
-
+  {path:'signUp' , component:SignUp}
 ];
 
 @NgModule({

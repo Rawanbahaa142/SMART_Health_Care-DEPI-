@@ -1,0 +1,73 @@
+
+<div class="container">
+  <form class="form" #loginform="ngForm" (ngSubmit)="handelForm(loginform)" >
+    <h3>Create an <span>account</span></h3>
+
+    <div class="my-3">
+      <input
+        type="text"
+        placeholder="User Name"
+        name="userName"
+        [(ngModel)]="data.name"
+        #userName="ngModel"
+        required
+        minlength="3"
+      />
+      @if (userName.invalid && loginform.submitted) {
+        @if (userName.errors?.['required']) {
+          <p class="error-text">Username is required</p>
+        }
+        @else if (userName.errors?.['minlength']) {
+          <p class="error-text">Minimum 3 characters</p>
+        }
+      }
+    </div>
+
+    <div class="my-3">
+      <input
+        type="email"
+        placeholder="Your Email"
+        name="userEmail"
+        [(ngModel)]="data.email"
+        #userEmail="ngModel"
+        email
+        required
+      />
+      @if ((userEmail.dirty || loginform.submitted) && userEmail.invalid) {
+        @if (userEmail.errors?.['required']) {
+          <p class="error-text">Email is required</p>
+        }
+        @if (userEmail.errors?.['email']) {
+          <p class="error-text">Email is invalid</p>
+        }
+      }
+    </div>
+
+    <div class="my-3">
+      <input
+        type="password"
+        placeholder="Password"
+        name="password"
+        [(ngModel)]="data.password"
+        #password="ngModel"
+        required
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      />
+      @if (loginform.submitted && password.invalid) {
+        @if (password.errors?.['required']) {
+          <p class="error-text">Password is required</p>
+        }
+        @if (password.errors?.['pattern']) {
+          <p class="error-text">
+            Password must include at least one uppercase, one lowercase, one number, and 8+ characters
+          </p>
+        }
+      }
+    </div>
+
+    <button type="submit" class="btn" >Sign Up</button>
+  </form>
+</div>
+
+
+
