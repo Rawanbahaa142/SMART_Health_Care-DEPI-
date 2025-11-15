@@ -11,7 +11,7 @@
         and restore health. Our mission is to provide innovative, evidence-based solutions that help
         individuals achieve their best possible health outcomes.
       </p>
-      <app-button></app-button>
+      <a href="#articles"><app-button></app-button></a>
     </div>
     <div class="right-content">
       <img src="/banner_Doc.png" alt="" class="img-fluid position-relative z-2" />
@@ -174,7 +174,7 @@
   </div>
 
   <ul class="nav nav-tabs justify-content-center" id="doctorTabs" role="tablist">
-   
+
    @for(special of specialities; let first=$first; track  $index){
      <li class="nav-item" role="presentation">
       <button
@@ -218,13 +218,13 @@
       </div>
     </div>
    }
-   
+
   </div>
 </section>
 <!-- End Doctors Section -->
 
 <!-- Start Blog Section -->
-<section class="interface-container shared-section-theme blog">
+<section class="interface-container shared-section-theme blog" id="articles">
   <div class="shared-head">
     <p>BLOG & ARTICLES</p>
     <p class="h1">Read Top Articles From <span>Expert Doctors</span></p>
@@ -248,22 +248,17 @@
             <p class="card-summary">
               {{article.summary}}
              </p>
-            <app-readmore-button></app-readmore-button>
+          <a (click)="OneArticlePage(article)"><app-readmore-button></app-readmore-button></a>
           </div>
         </div>
       </div>
     }
     </div>
     <div class="d-flex justify-content-center" routerLink="/articles">
-        <div class="py-1 for-blog">
-          We have More Articles 
-          <span>See From Here 
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-          </span>
-        </div>
+<app-button></app-button>
     </div>
-   
-    
+
+
   </div>
 </section>
 <!-- End Blog Section -->

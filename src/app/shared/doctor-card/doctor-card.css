@@ -40,6 +40,7 @@
       }
        & span:nth-child(2) {
        font-size: 12px;
+       cursor: pointer;
       }
     }
 
@@ -51,6 +52,7 @@
         background-color: #fff;
         color: var(--optionalColorTwo);
         transition: 0.5s ease;
+        
       }
      
     }

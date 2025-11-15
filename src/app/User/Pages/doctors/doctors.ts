@@ -9,8 +9,8 @@ import { Global } from '../../../services/global';
 })
 export class Doctors  {
 doctorName='';
-country='';
-specialty='';
+country='All Countries';
+specialty='All Specialties';
 doctorsNum:any;
 doctors:any[]=[];
 
@@ -21,5 +21,7 @@ constructor(private global:Global){
 
 getDoctors(){
   this.doctors=this.global.getDoctors(this.doctorName, this.specialty, this.country);
+  this.doctorsNum=this.doctors.length;
+  console.log(this.doctorName , this.specialty , this.country);
 }
 }

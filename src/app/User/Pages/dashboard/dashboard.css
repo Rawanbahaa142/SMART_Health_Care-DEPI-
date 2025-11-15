@@ -1,5 +1,5 @@
 .dashboard-container {
-  padding: 20px;
+  padding: 3%;
 }
 
 .appointments-info {
@@ -226,10 +226,4 @@
       top: 40px;
       left: 80px;
     }
-}
-.gradient-text {                 
-  background: linear-gradient(90deg, #690069, var(--mainColor),var(--background-color));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }

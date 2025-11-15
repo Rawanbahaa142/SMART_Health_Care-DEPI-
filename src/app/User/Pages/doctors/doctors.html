@@ -1,4 +1,5 @@
-<section class="search-doctors">
+<section class="doctors-container">
+    <section class="search-doctors">
 <div class="container">
 <div class="head">
  <p>FIND HEALTH PROFESSIONALS</p>
@@ -11,7 +12,7 @@
     <div class="row align-items-center w-100">
         <div class="search col-12 d-flex  col-md-4 d-flex flex-column align-items-start">
             <label for="name">Name</label>
-           <input type="text" [(ngModel)]="doctorName" name="doctorName" id="name" placeholder="name">
+           <input type="text" [(ngModel)]="doctorName" name="doctorName" id="name" placeholder="Doctor name">
         </div>
         <div class="col-12 col-md-4 d-flex flex-column align-items-start">
             <label for="Specialties">Specialty</label>
@@ -29,12 +30,12 @@
             <label for="country">Location</label>
              <select name="Country" id="country" [(ngModel)]="country">
                 <option selected class="form-select" value="All Countries" >All Countries</option>
-                <option class="form-select" value="Cairo" >Eygpt</option>
-                <option class="form-select" value="Alexandria" >USA</option>
-                <option class="form-select" value="Luxor" >Japan</option>
-                <option class="form-select" value="Qena" >Barsil</option>
-                <option class="form-select" value="Aswan" >China</option>
-                <option class="form-select" value="Suez" >India</option>
+                <option class="form-select" value="Eygpt" >Eygpt</option>
+                <option class="form-select" value="USA" >USA</option>
+                <option class="form-select" value="Japan" >Japan</option>
+                <option class="form-select" value="Barsil" >Barsil</option>
+                <option class="form-select" value="China" >China</option>
+                <option class="form-select" value="India" >India</option>
             </select>
         </div>
     </div>
@@ -43,8 +44,7 @@
           <span>
             <i class="bi bi-arrow-right"></i>
           </span>
-          <span (click)="getDoctors()">Search now</span></a
-        >
+          <span (click)="getDoctors()">Search now</span></a>
  </div>
 </div>
 </section>
@@ -61,12 +61,13 @@
             <p >{{specialty}} Doctors ({{doctorsNum}})</p>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
               @for (doctor of doctors; track $index) { 
-              <div class="col-md-3 col-8">
+              <div class="col-md-3 col-10">
                 <app-doctor-card [doctor]="doctor" [fontSize]="10"></app-doctor-card>
               </div>
               }
         </div>
     </div>
+</section>
 </section>

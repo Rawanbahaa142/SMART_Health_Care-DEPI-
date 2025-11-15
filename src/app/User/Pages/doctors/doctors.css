@@ -1,7 +1,9 @@
 * {
     outline: 0;
 }
-
+.doctors-container{
+  padding: 3%;
+}
 .search-doctors{
     text-align: center;
     & .head{

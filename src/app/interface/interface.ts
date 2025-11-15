@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnDestroy, OnInit } from '@angular/core';
 import {  Global } from '../services/global';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-interface',
@@ -27,14 +28,14 @@ export class Interface implements OnInit, OnDestroy {
 
   duration = 1200;
 
-  
-  constructor(private global:Global){
+
+  constructor(private global:Global , private router :Router){
     this.articles=this.global.getArticlesbyCategory(this.category,this.search);
     this.doctors=this.global.doctors;
     console.log(this.doctors);
 
   }
-  
+
   ngOnInit(): void {
     this.sectionsCurrent = 0;
     this.patientReviewsCurrent = 0;
@@ -90,6 +91,9 @@ export class Interface implements OnInit, OnDestroy {
     }
     return String(n);
   }
-  
+
+ OneArticlePage(article:any){
+   this.global.OneArticlePage(article);
+  }
 
 }

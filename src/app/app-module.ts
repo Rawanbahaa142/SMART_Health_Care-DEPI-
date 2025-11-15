@@ -28,7 +28,8 @@ import { MatFormFieldModule } from '@angular/material/form-field'; // لو حب�
 import { MatInputModule } from '@angular/material/input'; // لو حبيت تستخدم Input
 import { MatCardModule } from '@angular/material/card';
 import { Doctors } from './User/Pages/doctors/doctors';
-import { OneArticle } from './one-article/one-article'; // Card لتغليف التقويم
+import { OneArticle } from './one-article/one-article';
+import { DoctorInfo } from './User/Pages/doctor-info/doctor-info'; // Card لتغليف التقويم
 @NgModule({
   declarations: [
     App,
@@ -50,6 +51,7 @@ import { OneArticle } from './one-article/one-article'; // Card لتغليف ا�
     Usernav,
     Doctors,
     OneArticle,
+    DoctorInfo,
   ],
   imports: [
     BrowserModule,
