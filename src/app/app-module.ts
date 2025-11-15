@@ -30,6 +30,11 @@ import { MatCardModule } from '@angular/material/card';
 import { Doctors } from './User/Pages/doctors/doctors';
 import { OneArticle } from './one-article/one-article';
 import { DoctorInfo } from './User/Pages/doctor-info/doctor-info'; // Card لتغليف التقويم
+import { Login } from './login/login'; // Card لتغليف التقويم
+import { SignUp } from './sign-up/sign-up';
+import { Patients } from './dashboard/patients/patients';
+
+
 @NgModule({
   declarations: [
     App,
@@ -52,6 +57,9 @@ import { DoctorInfo } from './User/Pages/doctor-info/doctor-info'; // Card لت�
     Doctors,
     OneArticle,
     DoctorInfo,
+    Login,
+    SignUp,
+    Patients
   ],
   imports: [
     BrowserModule,
@@ -64,8 +72,8 @@ import { DoctorInfo } from './User/Pages/doctor-info/doctor-info'; // Card لت�
     MatNativeDateModule, // لدعم أنواع التاريخ
     MatFormFieldModule, // لو عايزة تحطي Input مع الـ Datepicker
     MatInputModule,      // لو عايزة Input
-    MatCardModule        // لو عايزة Card تحوي الـ calendar
-    
+    MatCardModule ,       // لو عايزة Card تحوي الـ calendar
+
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
