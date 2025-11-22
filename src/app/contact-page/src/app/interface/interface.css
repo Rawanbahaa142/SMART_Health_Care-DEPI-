@@ -1,0 +1,367 @@
+/* Start Bannner Style */
+.banner {
+    padding: 5% 10px 0;
+    position: relative;
+    background-image: url('/banner-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center right;
+}
+
+.text-dark {
+    color: #0d1b2a !important;
+}
+
+.text-secondary {
+    color: #666 !important;
+}
+.banner .right-content img{
+    max-width: 500px;
+}
+
+/* End Bannner Style */
+
+/* Start About Hospo */
+/* Start About Hospo */
+
+:host {
+  --primary: #0b2545;
+  --muted: #6b7b8a;
+  --accent: #7c63ff;
+  --mint: #e6f7f1;
+  --lavender: #efe7ff;
+}
+
+.about-hospa {
+  .display-5 { color: var(--primary); }
+  .lead { color: var(--muted); }
+
+  .lists li {
+    padding: 8px 0;
+    font-weight: 600;
+    color: #133046;
+    .check {
+      color: #59b987;
+      font-size: 1.05rem;
+      margin-top: 2px;
+    }
+  }
+
+  .btn-purple {
+    background: linear-gradient(135deg, var(--accent), #9e83ff);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 6px 18px rgba(124,99,255,0.18);
+  }
+
+  .image-card {
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .rounded-custom {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+    object-fit: cover;
+  }
+
+
+  .stat-card {
+    width: 130px;
+    height: 130px;
+    border-radius: 70px;
+    padding: 5%;
+    position: absolute;
+    text-align: center;
+    background: white;
+  }
+
+  .stat-top {
+    right:27px ;
+    top: 10px;
+    background: linear-gradient(180deg, #f0eaff, #efe7ff);
+    border-radius: 20px;
+  }
+
+  .stat-bottom {
+    left: 25px;
+    bottom: 0px;
+    background: linear-gradient(180deg, #e9f6f0, #dff1ea);
+    border-radius: 18px;
+  }
+
+  .stat-number {
+    font-weight: 800;
+    color: #0b2545;
+  }
+
+  .stat-label {
+    color: #5f6b73;
+    line-height: 1;
+    margin-top: 6px;
+  }
+
+
+}
+
+
+/* End About Hospo */
+/* End About Hospo */
+
+/* start Doctor Section */
+.our-doctors {
+     & [data-bs-slide="next"] , [data-bs-slide="prev"] {
+    background-color: #fff;
+    border: 1px solid var(--mainColor);
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000 ;
+    width: 40px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    }
+    & [data-bs-slide="next"]:hover , [data-bs-slide="prev"]:hover{
+        color: #fff;
+        background-color: var(--mainColor);
+    }
+
+}
+.our-doctors ul.nav.nav-tabs{
+ justify-content: center;
+ gap: 10px;
+ border: 0 !important;
+}
+.our-doctors ul.nav.nav-tabs li {
+    border: 0;
+    background-color: #fff;
+}
+.our-doctors ul.nav.nav-tabs li button{
+    padding: 0.4rem 1.5rem;
+    width: 100%;
+    height: 100%;
+    border: 0 !important;
+    color: var(--blackColor);
+    border-radius: 20px;
+    border: 1px solid #C4DCF3 !important;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+.our-doctors ul.nav.nav-tabs li .active{
+    background-color: #C4DCF3;
+}
+.our-doctors ul.nav.nav-tabs li button:hover{
+    background-color: #C4DCF3;
+}
+
+/* End Doctor Section */
+
+
+
+/* Start Customer Opinions Section */
+.interface-container{
+    padding: 5%;
+}
+.customer-opinions .row .head-p{
+    color: var(--optionColor);
+    font-size: 12px;
+    font-weight: 700;
+}
+.customer-opinions .h2-with-opicaty{
+font-size: 52px;
+}
+.customer-opinions .rounded-card{
+    border-radius: 20px;
+}
+.customer-opinions .row {
+    position: relative;
+}
+.customer-opinions .image img{
+    position: absolute;
+    top: 25%;
+    right: 9%;
+    transform: translateY(-30%) translateX(-15%);
+    animation-name: identifier;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2.5s;
+}
+
+@keyframes identifier {
+    0%{
+        transform: translateY(-30%) translateX(-15%);
+    }
+    50%{
+        transform: translateY(-30%) translateX(20%);
+    }
+    100%{
+        transform: translateY(-30%) translateX(-15%);
+    }
+}
+.customer-opinions .right-side .d-flex{
+    gap: 10px;
+}
+
+.customer-opinions .right-side .d-flex i{
+    font-size: 30px;
+}
+.right-side .col-9 h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+.customer-opinions .right-side .col-sm-11 .icon{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.6s;
+}
+.customer-opinions .right-side .col-sm-11 .icon i{
+   color: var(--optionColor);
+    transition: 0.6s;
+    font-size: 2.4em;
+}
+.customer-opinions .right-side .col-sm-11:hover .icon{
+    background-color: var(--mainColor);
+}
+.customer-opinions .right-side .col-sm-11:hover .icon i{
+    color: white;
+}
+.customer-opinions  .sentence p{
+    color: var(--mainColor);;
+}
+.opinions{
+    background-color: #D6D2F1;
+}
+.img-with-opinion{
+    gap: 20px;
+}
+.img-with-opinion img{
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.directions button{
+    border: 1px solid white;
+    margin-left: 15px;
+    border-radius: 50%;
+    width: 40px;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    transition: 0.6s;
+}
+.directions button:hover{
+    background-color: white;
+}
+/* End Customer Opinions Section */
+
+/* start blog */
+.for-blog{
+ font-family: cursive;
+ border: 1px solid var(--mainColor);
+ padding: 20px;
+ width: 100%;
+ text-align: center;
+ cursor: pointer;
+ border-radius: 10px;
+}
+.for-blog:hover{
+    color: var(--medical-gray) ;
+}
+.stat-top{
+     background: linear-gradient(180deg, #f0eaff, #efe7ff);
+    border-radius: 20px;
+}
+.stat-bottom{
+    background: linear-gradient(180deg, #e9f6f0, #dff1ea);
+    border-radius: 18px;
+}
+
+/* end blog */
+
+/* start media Query */
+
+@media (max-width:992px) {
+    .our-doctors ul.nav.nav-tabs li button{
+        padding: 3px;
+        font-size: 13px;
+    }
+    .banner .right-content img{
+    max-width: 350px;
+    }
+    .customer-opinions .image img{
+        display: none;
+    }
+    .about-hospa{
+      &  .stat-card {
+        width: 180px;
+        height: 180px;
+    }
+     .stat-top {
+    right:27px ;
+    top: 10px;
+
+    }
+
+  .stat-bottom {
+    left: 25px;
+    bottom: 0px;
+
+    }
+    }
+
+  
+}
+
+@media (max-width:768px) {
+    .banner .right-content{
+     text-align: center;
+     width: 100%;
+      & img{
+     width: 100%;
+    }
+    }
+    .customer-opinions .h2-with-opicaty{
+        font-size: 24px;
+    }
+  .about-hospa{
+    & .stat-card {
+    width: 150px ;
+    height: 150px ;
+  }
+  }
+
+
+}
+
+
+@media (max-width:550px) {
+  .about-hospa{
+    &   .stat-card {
+    width: 110px ;
+    height: 110px ;
+  }
+  }
+
+
+}
+@media (max-width:500px){
+    .img-with-opinion{
+        flex-wrap: wrap;
+    }
+    .img-with-opinion .directions {
+        width: 100%;
+    }
+    .customer-opinions .right-side>div:last-child >div{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* end Media Query */

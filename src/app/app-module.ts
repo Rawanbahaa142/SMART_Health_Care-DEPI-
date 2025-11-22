@@ -26,7 +26,15 @@ import { MatDatepickerModule } from '@angular/material/datepicker'; // مودي�
 import { MatNativeDateModule } from '@angular/material/core'; // موديول لدعم التواريخ بشكل Native
 import { MatFormFieldModule } from '@angular/material/form-field'; // لو حبيت تحطي Input حول الـ Datepicker
 import { MatInputModule } from '@angular/material/input'; // لو حبيت تستخدم Input
-import { MatCardModule } from '@angular/material/card'; // Card لتغليف التقويم
+import { MatCardModule } from '@angular/material/card';
+import { Doctors } from './User/Pages/doctors/doctors';
+import { OneArticle } from './one-article/one-article';
+import { DoctorInfo } from './User/Pages/doctor-info/doctor-info'; // Card لتغليف التقويم
+import { Login } from './login/login'; // Card لتغليف التقويم
+import { SignUp } from './sign-up/sign-up';
+import { Patients } from './dashboard/patients/patients';
+
+
 @NgModule({
   declarations: [
     App,
@@ -46,6 +54,12 @@ import { MatCardModule } from '@angular/material/card'; // Card لتغليف ا�
     LeftNav,
     Dashboard,
     Usernav,
+    Doctors,
+    OneArticle,
+    DoctorInfo,
+    Login,
+    SignUp,
+    Patients
   ],
   imports: [
     BrowserModule,
@@ -58,8 +72,8 @@ import { MatCardModule } from '@angular/material/card'; // Card لتغليف ا�
     MatNativeDateModule, // لدعم أنواع التاريخ
     MatFormFieldModule, // لو عايزة تحطي Input مع الـ Datepicker
     MatInputModule,      // لو عايزة Input
-    MatCardModule        // لو عايزة Card تحوي الـ calendar
-    
+    MatCardModule ,       // لو عايزة Card تحوي الـ calendar
+
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

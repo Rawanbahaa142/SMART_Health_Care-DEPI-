@@ -204,7 +204,6 @@
 }
 
 .success-box {
-  /* background-color: var(--mainColor); */
  & p{
   color: var(--mainColor);
 }

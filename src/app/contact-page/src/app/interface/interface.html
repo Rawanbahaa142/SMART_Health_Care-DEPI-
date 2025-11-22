@@ -1,0 +1,419 @@
+<app-navbar></app-navbar>
+
+<!-- Start Bannner -->
+<section class="banner d-flex justify-content-between align-items-center">
+  <div class="container d-flex justify-content-between align-items-end flex-column flex-md-row">
+    <div class="left-content d-flex flex-column pb-4">
+      <h1 class="fw-bold fs-1 text-dark">Transforming lives,</h1>
+      <h1 class="fw-semibold fs-2 text-dark">Restoring Your Health.</h1>
+      <p class="text-secondary my-4" style="max-width: 500px">
+        At SMART Health Care, we believe in the power of personalized medicine to transform lives
+        and restore health. Our mission is to provide innovative, evidence-based solutions that help
+        individuals achieve their best possible health outcomes.
+      </p>
+      <app-button></app-button>
+    </div>
+    <div class="right-content">
+      <img src="/banner_Doc.png" alt="" class="img-fluid position-relative z-2" />
+    </div>
+  </div>
+</section>
+<!-- End Bannner -->
+
+<!-- Start About Hospo -->
+<div class="about-hospa container py-5" id="about">
+  <div class="row align-items-center gx-5">
+    <div class="col-lg-6">
+      <small class="text-primary fw-bold">ABOUT HOSPA</small>
+      <h1 class="display-5 fw-bold mt-2">
+        We Provide Finnest Patient's <span class="text-dark d-block">Care & Amenities</span>
+      </h1>
+      <p class="lead text-muted">
+        Embrace a world of comprehensive healthcare where your well-being takes center stage. At
+        Meca, we're dedicated to providing you with personalized and compassionate medical services.
+      </p>
+
+      <div class="row g-2 lists">
+        <div class="col-6">
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-start">
+              <i class="bi bi-check2-circle me-2 check"></i> Seamless Care
+            </li>
+            <li class="d-flex align-items-start">
+              <i class="bi bi-check2-circle me-2 check"></i> Warm and Welcoming Environment
+            </li>
+            <li class="d-flex align-items-start">
+              <i class="bi bi-check2-circle me-2 check"></i> Comprehensive Care
+            </li>
+            <li class="d-flex align-items-start">
+              <i class="bi bi-check2-circle me-2 check"></i> Expert Doctors
+            </li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-start">
+              <i class="bi bi-check2-circle me-2 check"></i> Patient-Centered Care
+            </li>
+            <li class="d-flex align-items-start">
+              <i class="bi bi-check2-circle me-2 check"></i> Personalized Approach
+            </li>
+            <li class="d-flex align-items-start">
+              <i class="bi bi-check2-circle me-2 check"></i> Cutting-Edge Technology
+            </li>
+            <li class="d-flex align-items-start">
+              <i class="bi bi-check2-circle me-2 check"></i> Positive Reviews
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-muted mt-3">
+        Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet
+        suscipit lobortis nisl ut aliquip erat volutpat autem vel eum iriure dolor in hendrerit in
+        vulputate velit.
+      </p>
+
+      <!-- <a class="btn btn-purple btn-lg mt-2"
+        ><i class="bi bi-arrow-right-circle me-2"></i> More About Us</a
+      > -->
+    </div>
+
+    <div class="col-lg-6 position-relative">
+      <div class="card image-card border-0">
+        <img src="/about.png" alt="doctor" class="img-fluid rounded-custom" />
+      </div>
+
+      <div
+        class="stat-card stat-top shadow-sm d-flex flex-column align-items-center justify-content-center"
+      >
+        <div class="stat-number h2 mb-0">{{ sectionsCurrent }}</div>
+        <div class="stat-label small text-muted">DIFFERENT<br />SECTIONS</div>
+      </div>
+      <div
+        class="stat-card stat-bottom shadow-sm d-flex flex-column align-items-center justify-content-center"
+      >
+        <div class="stat-number h3 mb-0">{{ formatNumberWithSuffix(patientReviewsCurrent) }}</div>
+        <div class="stat-label small text-muted">PATIENT'S<br />REVIEWS</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End About Hospo -->
+
+<!-- start customer opinins -->
+<section class="interface-container customer-opinions mt-4">
+  <div class="container">
+    <div class="row">
+      <p class="head-p">YOUR HEALTH IS OUR TOP PRIORITY</p>
+      <h2 class="h2-with-opicaty mb-5">
+        Our track record speaks for itself. Many individuals have chosen
+        <span class="opacity-25">our medical center and have had positive, transformative</span>
+      </h2>
+      <div class="image">
+        <img src="/shape.png" alt="" />
+      </div>
+      <div class="under-img row mt-5">
+        <div class="left-side col-lg-6 col-12">
+          <img src="/testimonial1.jpg" alt="" class="w-100 rounded-card" />
+          <div class="opinions p-4 mt-4 rounded-card">
+            <p>
+              “I had a great experience at this healthcare clinic. I was seen quickly, and the
+              doctor was able to diagnose and treat my condition very patiently.
+            </p>
+            <div class="img-with-opinion d-flex mt-5">
+              <img src="/user3.jpg" alt="" />
+              <div class="opinion">
+                <h3>Walter White</h3>
+                <p>Head of Cardiology Department</p>
+              </div>
+              <div class="directions">
+                <button class="mb-1"><i class="fa-solid fa-arrow-left"></i></button>
+                <button><i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-side col-lg-6 col-12 mt-3">
+          <div
+            class="col-12 col-sm-6 bg-success text-center bg-opacity-25 border border-0 p-2 rounded-card"
+          >
+            <p class="mt-3">AVERAGE GOOGLE RATINGS</p>
+            <div class="d-flex justify-content-center">
+              <i class="fa-solid fa-star text-success text-opacity-50"></i>
+              <h3>4.9</h3>
+            </div>
+          </div>
+          <div class="col-12 mt-4">
+            <img src="/testimonial2.jpg" alt="" class="w-100 rounded-card" />
+          </div>
+          <div class="col-12 col-sm-11 mt-4 bg-secondary bg-opacity-25 rounded-card">
+            <div class="d-flex p-3 align-items-center">
+              <div class="icon">
+                <i class="fa-solid fa-house-medical"></i>
+              </div>
+              <div class="sentence p-3">
+                <p>HIPAA COMPLIANT</p>
+                <h5>Hospa provides award-winning quality care</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end customer Opinins -->
+
+<!-- Start Doctors Section -->
+<section class="interface-container our-doctors shared-section-theme">
+  <div class="shared-head">
+    <p>DOCTORS</p>
+    <p class="h1">Our Experts Doctors <span>For The Patients</span></p>
+  </div>
+
+  <ul class="nav nav-tabs justify-content-center" id="doctorTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="cardiology-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#cardiology"
+        type="button"
+        role="tab"
+      >
+        Cardiologist
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="orthopedics-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#orthopedics"
+        type="button"
+        role="tab"
+      >
+        Orthopedist
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="nutrition-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#nutrition"
+        type="button"
+        role="tab"
+      >
+        Nutritionist
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="Gynocologist-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#Gynocologist"
+        type="button"
+        role="tab"
+      >
+        Gynocologist
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3">
+    <div class="tab-pane fade show active" id="cardiology" role="tabpanel">
+      <div id="carouselCardiology" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              @for (doctor of doctors; track $index) { @if
+              (doctor.jobTitle.includes('Cardiologist')){
+              <div class="col-md-3">
+                <app-doctor-card [doctor]="doctor"></app-doctor-card>
+              </div>
+              }}
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselCardiology"
+          data-bs-slide="prev"
+        >
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <button 
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselCardiology"
+          data-bs-slide="next"
+        >
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="orthopedics" role="tabpanel">
+      <div id="carouselOrthopedics" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              @for (doctor of doctors; track $index) { @if
+              (doctor.jobTitle.includes('Orthopedist')){
+              <div class="col-md-3">
+                <app-doctor-card [doctor]="doctor"></app-doctor-card>
+              </div>
+              }}
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselCardiology"
+          data-bs-slide="prev"
+        >
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselCardiology"
+          data-bs-slide="next"
+        >
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="nutrition" role="tabpanel">
+      <div id="carouselNutrition" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              @for (doctor of doctors; track $index) { @if
+              (doctor.jobTitle.includes('Nutritionist')){
+              <div class="col-md-3">
+                <app-doctor-card [doctor]="doctor"></app-doctor-card>
+              </div>
+              }}
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselCardiology"
+          data-bs-slide="prev"
+        >
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselCardiology"
+          data-bs-slide="next"
+        >
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="Gynocologist" role="tabpanel">
+      <div id="carouselGynocologist" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              @for (doctor of doctors; track $index) { @if
+              (doctor.jobTitle.includes('Gynocologist')){
+              <div class="col-md-3">
+                <app-doctor-card [doctor]="doctor"></app-doctor-card>
+                <app-doctor-card [doctor]="doctor"></app-doctor-card>
+              </div>
+              }}
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselCardiology"
+          data-bs-slide="prev"
+        >
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselCardiology"
+          data-bs-slide="next"
+        >
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Doctors Section -->
+
+<!-- Start Blog Section -->
+<section class="interface-container shared-section-theme blog">
+  <div class="shared-head">
+    <p>BLOG & ARTICLES</p>
+    <p class="h1">Read Top Articles From <span>Expert Doctors</span></p>
+  </div>
+    <div class="container">
+    <div class="row">
+    @for(article of articles | slice : 0 : 3; track $index) {
+   <div class="col-md-4 col-lg-4 col-sm-12">
+        <div class="card border-0">
+          <div class="position-relative">
+            <img src="{{article.image}}" class="card-img-top rounded" alt="..." />
+            <div class="tag rounded-pill px-4 py-2 text-capitalize position-absolute" style="bottom: 10px;background: #dff1ea;left: 10px;">
+              {{article.category}}
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="mb-2 d-block">{{ article.date | date:'mediumDate' }}</span>
+            <h5 class="card-title">
+              {{article.title}}
+            </h5>
+            <p class="card-summary">
+              {{article.summary}}
+             </p>
+            <app-readmore-button></app-readmore-button>
+          </div>
+        </div>
+      </div>
+    }
+    </div>
+    <div class="d-flex justify-content-center" routerLink="/articles">
+        <div class="py-1 for-blog">
+          We have More Articles 
+          <span>See From Here 
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </div>
+    </div>
+   
+    
+  </div>
+</section>
+<!-- End Blog Section -->
+
+<!-- Start Footer Section -->
+<app-footer></app-footer>
+<!-- End Footer Section -->
+
+<!-- scroller -->
+<app-scroller></app-scroller>

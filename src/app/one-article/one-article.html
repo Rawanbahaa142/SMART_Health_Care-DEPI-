@@ -1,0 +1,79 @@
+<app-navbar></app-navbar>
+
+<section class="banner position-relative">
+  <div class="layout w-100 position-absolute">
+    <div class="content">
+      <button class="jobTitle">{{ Article.category }}</button>
+      <p class="h1">{{ Article.title }}</p>
+      <ul class="d-flex justify-content-around">
+        <li>{{ Article.author }}</li>
+        <li>{{ Article.date | date }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section >
+  <div class="interface">
+    <p>{{ Article.interface }}</p>
+  </div>
+  <div class="content">
+    <p>{{ Article.content }}</p>
+  </div>
+
+  <div>
+    <img src="{{ Article.image }}" alt="" />
+  </div>
+
+  <div class="doctor-talk">
+    <p>"{{ Article.doctorTalk }}"</p>
+     <p>{{ Article.author }}</p>
+  </div>
+
+  <div>
+    <p>
+    <span class="gradient-text fs-10 h3">Summary</span>
+    <span class="d-block my-3">{{ Article.summary }}</span>
+    </p>
+  </div>
+</section>
+
+<section>
+  <p class="gradient-text h3  my-3">Related Articles</p>
+  <div class="d-flex justify-content-center flex-wrap row">
+    @for(article of Articles | slice : 1:4; track $index) {
+    <div class="col-10 col-md-5 col-lg-4 my-3">
+      <div class="card border-0">
+        <div class="position-relative">
+          <img src="{{ article.image }}" class="card-img-top rounded w-100 " alt="..." />
+          <div
+            class="tag rounded-pill px-4 py-2 text-capitalize position-absolute"
+            style="bottom: 10px; background: #dff1ea; left: 10px"
+          >
+            {{ article.category }}
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="mb-2 d-block">{{ article.date | date : 'mediumDate' }}</span>
+          <h5 class="card-title">
+            {{ article.title }}
+          </h5>
+          <div>
+            <p class="card-summary">
+            {{ article.summary }}
+          </p>
+          </div>
+          <a (click)="OneArticlePage(article)"><app-readmore-button></app-readmore-button></a>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>
+
+<!-- Start Footer Section -->
+<app-footer></app-footer>
+<!-- End Footer Section -->
+
+<!-- scroller -->
+<app-scroller></app-scroller>

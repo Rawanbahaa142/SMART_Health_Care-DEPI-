@@ -1,0 +1,7 @@
+.dasboard {
+    background:rgb(242 245 252);
+    height:100vh
+}
+.doctor-information .card {
+    flex-basis:50%
+}

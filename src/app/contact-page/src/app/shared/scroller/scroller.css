@@ -1,0 +1,14 @@
+.scroller{
+    padding: 15px;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index:1000;
+    background-color: var(--optionColor);
+    color: #fff;
+    transition: .4s ease;
+}
+.scroller:hover{
+    background-color: var(--mainColor);
+}

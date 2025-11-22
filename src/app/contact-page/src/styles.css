@@ -1,0 +1,105 @@
+:root{
+
+    --background-color:#131147;
+    --text-color:#f5f1f1;
+    --cards-color:#D7ECE4;
+    --optionColor:#0B55E5;
+    --optionalColorTwo: #F82828;
+    --blackColor:#020D2B;
+    --mainColor: #9588E8;
+     --medical-primary: #2563eb;
+    --medical-primary-light: #60a5fa;
+    --medical-secondary: #10b981;
+    --medical-secondary-light: #34d399;
+    --medical-dark: #1e293b;
+    --medical-gray: #64748b;
+    --medical-light-gray: #f8fafc;
+    --text-purple: #8b5cf6;
+    --gradient-hero: linear-gradient(135deg, var(--medical-primary), var(--medical-primary-light));
+    --gradient-card: linear-gradient(135deg, #ffffff, #f8fafc);
+    --gradient-accent: linear-gradient(135deg, var(--medical-secondary), var(--medical-secondary-light));
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+body {
+    font-family: "Libre Franklin", sans-serif;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.shared-section-theme{
+    padding: 5% 3%;
+}
+
+.shared-head{
+ margin: 3% 0;
+ text-align: center;
+
+
+ & p:first-child{
+    color: var(--optionColor);
+    font-weight: bold;
+    text-transform: capitalize;
+ }
+ & p:last-child{
+    width: 46%;
+    display: inline-block;
+    color: var(--blackColor);
+    font-size: 3rem;
+    & span{
+        font-weight: bolder;
+    }
+ }
+}
+/* blog */
+/* start blog */
+.blog .tag{
+    background-color:#C4DCF3;
+    left: 5px;
+    bottom: 5px;
+    transition: 0.5s ease;
+    font-size: 13px;
+}
+.blog .tag:hover{
+    color: #fff;
+    background-color: var(--mainColor) !important;
+}
+.blog .card-body span.d-block{
+    font-size: 14px;
+    color: grey;
+}
+.blog .text-center{
+    color: var(--mainColor);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.blog .text-center:hover{
+    color: var(--optionColor);
+}
+.blog .card-summary{
+    color: gray;
+}
+/* end blog */
+
+@media (max-width:1100px) and (min-width:769px){
+.shared-head{
+
+ & p:last-child{
+   width: 70%;
+ }
+}}
+
+@media (max-width:768px){
+.shared-head{
+ & p:last-child{
+   width: 100%;
+    font-size: 1.6rem;
+ }
+}}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

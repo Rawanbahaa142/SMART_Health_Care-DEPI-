@@ -1,0 +1,41 @@
+nav{
+    padding: 20px;
+    background-image: url('/banner-bg.jpg');
+    & .d-flex{
+        & button:first-child{
+           background-color: #fff;
+           color: var(--mainColor);
+        }
+        & button:last-child{
+            background-color: var(--mainColor);
+            color: #fff;
+        }
+
+        & button:first-child:hover{
+           background-color: var(--blackColor);
+            color: #fff;
+        }
+        & button:last-child:hover{
+           background-color:var(--blackColor);
+           color: #fff;
+        }
+    }
+    & .nav-item .nav-link{
+        color: grey !important;
+    }
+    & .navbar-nav .nav-link:hover{
+        color: var(--mainColor) !important;
+    }
+    & .navbar-toggler{ 
+    outline: none !important;
+    color: var(--mainColor);
+    font-size: 23px;
+    border: 1px solid var(--mainColor);
+    }
+    & .navbar-toggler:focus{
+    box-shadow: 1px 2px 5px var(--mainColor);
+    }
+    img[alt="Logo"]{
+        transform: scale(2.7);
+    }
+}

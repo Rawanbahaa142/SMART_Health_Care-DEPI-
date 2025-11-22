@@ -1,0 +1,59 @@
+.card {
+  border: 0;
+  text-align: center;
+  & .doctor-pic {
+    position: relative;
+
+    & img {
+      width: 100%;
+      border-radius: 25px;
+    }
+
+    & img + div {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid var(--optionalColorTwo);
+      color: var(--optionalColorTwo);
+      width: 90%;
+      padding: 7px 5px;
+      border-radius: 25px;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.5s ease;
+
+      & a {
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+      }
+      & span:first-child {
+        padding: 5px;
+        border-radius: 50%;
+        background-color: var(--optionalColorTwo);
+        border: 1px solid var(--optionalColorTwo);
+        color: #fff;
+      }
+    }
+
+    & img + div:hover {
+      background-color: var(--optionalColorTwo);
+      color: #fff;
+
+      & span:first-child {
+        background-color: #fff;
+        color: var(--optionalColorTwo);
+        transition: 0.5s ease;
+      }
+    }
+  }
+  & .doctor-info {
+    padding: 20px 10px;
+  }
+  & .doctor-info p:first-child {
+    transition: 0.5s ease;
+  }
+  & .doctor-info p:first-child:hover {
+    color: var(--mainColor);
+  }
+}

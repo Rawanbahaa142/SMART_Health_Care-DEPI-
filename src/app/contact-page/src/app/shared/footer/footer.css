@@ -1,0 +1,11 @@
+footer{
+    background-color: #020D2B ;
+    color: lightgrey;
+    padding:3% 0;
+}
+footer a:hover { 
+    color: #fff !important; 
+     }
+footer .list-unstyled .text-decoration-none:hover{
+    text-decoration: underline !important;
+}

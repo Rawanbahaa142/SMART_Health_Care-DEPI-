@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Input, Output, output } from '@angular/core';
-import { ArticlesService } from '../services/articles-service';
+import { Component } from '@angular/core';
+import {  Global } from '../services/global';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-articles',
@@ -11,15 +13,11 @@ export class Articles {
   articles: any[]=[];
    search='';
    category='All';
-  constructor(private articleService: ArticlesService){
-    this.articles=this.articleService.getArticles(this.search);
+  constructor(private global: Global,private router :Router){
+    this.articles=this.global.getArticlesbyCategory(this.category,this.search);
   }
   showArticles(){
-    if(this.category==='All'){
-     this.articles=this.articleService.getArticles(this.search);
-    }else{
-      this.articles=this.articleService.getArticlesbyCategory(this.category, this.search);
-    }
+    this.articles=this.global.getArticlesbyCategory(this.category, this.search);
     console.log(this.articles);
   }
 
@@ -27,5 +25,10 @@ export class Articles {
    this.search='';
    this.category='All';
    this.showArticles();
+  }
+  OneArticlePage(article:any){
+    this.router.navigate(['/one-article'], {
+      state: article
+    });
   }
 }

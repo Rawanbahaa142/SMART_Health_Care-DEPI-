@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnDestroy, OnInit } from '@angular/core';
-import { ArticlesService } from '../services/articles-service';
+import {  Global } from '../services/global';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-interface',
@@ -9,19 +10,11 @@ import { ArticlesService } from '../services/articles-service';
 })
 export class Interface implements OnInit, OnDestroy {
   articles: any[]=[];
+  doctors:any[]=[];
   search='';
-  doctors = [
-    { imgUrl: 'doctor1.jpg', name: 'Dr. Jonathon Ronan', jobTitle: 'Cardiologist' },
-    { imgUrl: 'doctor2.jpg', name: 'Dr. Walter White', jobTitle: 'Cardiologist' },
-    { imgUrl: 'doctor3.jpg', name: 'Dr. Victor James', jobTitle: 'Cardiologist , Orthopedist' },
-    { imgUrl: 'doctor5.jpg', name: 'Dr. Philips Rownd', jobTitle: 'Cardiologist , Gynocologist' },
-    {
-      imgUrl: 'doctor9.jpg',
-      name: 'Dr. Jane Ronan',
-      jobTitle: 'Cardiologist , Nutritionist , Orthopedist',
-    },
-  ];
+  specialities=["Cardiologist", "Orthopedist","Nutritionist","Gynocologist"];
 
+  category="";
   sectionsTarget = 22;
   patientReviewsTarget = 5000;
 
@@ -35,10 +28,14 @@ export class Interface implements OnInit, OnDestroy {
 
   duration = 1200;
 
-  
-  constructor(private articleService: ArticlesService){
-    this.articles=this.articleService.getArticles(this.search);
+
+  constructor(private global:Global , private router :Router){
+    this.articles=this.global.getArticlesbyCategory(this.category,this.search);
+    this.doctors=this.global.doctors;
+    console.log(this.doctors);
+
   }
+
   ngOnInit(): void {
     this.sectionsCurrent = 0;
     this.patientReviewsCurrent = 0;
@@ -94,6 +91,9 @@ export class Interface implements OnInit, OnDestroy {
     }
     return String(n);
   }
-  
+
+ OneArticlePage(article:any){
+   this.global.OneArticlePage(article);
+  }
 
 }

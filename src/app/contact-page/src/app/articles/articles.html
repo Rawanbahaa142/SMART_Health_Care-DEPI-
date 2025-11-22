@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<section class="interface-container our-doctors shared-section-theme">
+  <div class="shared-head">
+    <p>Articles</p>
+    <p class="h1">Explore Our <span>Medical Articles</span></p>
+  </div>
+ <div class="filter d-flex justify-content-center flex-nowrap">
+     <div class="input-group justify-content-center">
+      <select name="articles" id="articles" [(ngModel)]="category">
+        <option  selected value="All">All Specialties</option>
+        <option value="Telemedicine">Telemedicine</option>
+        <option value="Mental Health">Mental Health</option>
+        <option value="Nutrition">Nutrition</option>
+        <option value="Oncology">Oncology</option>
+        <option value="Wellness">Wellness</option>
+
+        <option value="Technology">Technology</option>
+        <option value="Women's Health">Immunology</option>
+        <option value="Cancer Research">Cancer Research</option>
+        <option value="Regenerative Medicine">Regenerative Medicine</option>
+        <option value="Geriatrics">Geriatrics</option>
+      </select>
+
+      <input type="text"  placeholder="Search articles..." [(ngModel)]="search" name="search">
+      
+
+      <button class="btn btn-primary" type="button" (click)="showArticles()">Search</button>
+    </div>
+ </div>
+  </section>
+
+  <section class="blog">
+    <div class="row">
+   @if(articles.length>0){ 
+   @for(article of articles; track $index) {
+    <div class="col-lg-4 col-12 col-md-6">
+        <div class="card border-0">
+          <div class="position-relative">
+            <img src="{{article.image}}" class="card-img-top rounded" alt="..." />
+            <div class="tag rounded-pill px-4 py-2 text-capitalize position-absolute" style="bottom: 10px;background: #dff1ea;left: 10px;">
+              {{article.category}}
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="mb-2 d-block">{{ article.date | date:'mediumDate' }}</span>
+            <h5 class="card-title">
+              {{article.title}}
+            </h5>
+            <p class="card-summary">
+              {{article.summary}}
+            </p>
+            <app-readmore-button></app-readmore-button>
+          </div>
+        </div>
+      </div>
+    }
+   }@else {
+    <div>
+    <img src="/noDataF.png" alt="No Data Founded">
+    <div class="noData">
+      <p class="h3">Oops, no matchs</p>
+      <p>We couldn't find any search results</p>
+      <p>Give it another go</p>
+      <button (click)="returnTostart()" class="btn">All Articles</button>
+    </div>
+    </div>
+   }
+    </div>
+  </section>
+  <app-scroller></app-scroller>
+<app-footer></app-footer>

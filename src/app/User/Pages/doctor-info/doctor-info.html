@@ -1,0 +1,66 @@
+<div class="doctor-data-container">
+  <div class="backdoctors col-12">
+    <button routerLink="/doctors">
+      <span><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+      <span>Back</span>
+    </button>
+  </div>
+
+  <section
+    class="doctor-card d-flex justify-content-between align-items-center col-lg-8 col-12 flex-sm-row-reverse flex-column"
+  >
+    <div>
+      <img [src]="'/' + doctor.imgUrl" [alt]="'Doctor' + doctor.name" />
+    </div>
+    <div class="d-flex align-items-center flex-column d-sm-block">
+      <p class="h3">{{ doctor.name }}</p>
+      <p class="jobTitle">{{ doctor.jobTitle }}</p>
+      <div>
+        <p>
+          <span><i class="fas fa-star"></i></span>
+          <!-- {{doctor.rating}} (120 reviews) -->
+          <span>doctor.rating (120 reviews)</span>
+        </p>
+        <p>
+          <span>
+            <i class="fas fa-certificate"></i>
+          </span>
+          <span>Years of Experience</span>
+        </p>
+        <p>
+          <span>
+            <i class="fas fa-globe"></i>
+          </span>
+          <span>{{ doctor.country }}</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="appointment-card col-lg-10 col-12 flex-column">
+    <p class="h4">Select data</p>
+    <mat-card class="col-lg-6 col-10 m-auto">
+      <mat-calendar [(selected)]="selectedDate" (selectedChange)="getAvailableHours($event)"></mat-calendar>
+    </mat-card>
+  </section>
+
+  
+  @if(availableHours){
+  <section class="availableHours">
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
+  </section>
+  }
+ 
+</div>

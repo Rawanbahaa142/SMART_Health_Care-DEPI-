@@ -1,0 +1,79 @@
+* {
+    outline: 0;
+}
+.doctors-container{
+  padding: 3%;
+}
+.search-doctors{
+    text-align: center;
+    & .head{
+      & p:first-child{
+        color: var(--medical-primary);
+        font-size: 12px;
+        font-weight: bold;
+      } 
+      & p:nth-child(2){
+         font-size: 2rem;
+      } 
+    }
+}
+.filter {
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 5% 2%;
+    margin: 3% 0;
+    & .row {
+        justify-content: space-between;
+        margin-bottom: 10px;
+        & div{
+            gap: 10px;
+            color: #687390;
+            font-size: 15px;
+        }
+        & div input, & div select {
+            width: 100%;
+            border-radius: 20px;
+            border: 1px solid lightgrey;
+            padding: 10px;
+            background-color: #E1E6EB;
+            color: #687390;
+        }
+    }
+}
+@media (max-width:768px) {
+      .filter{
+       
+    & .row{
+        gap: 30px;
+    }
+  }
+}
+
+ .btn{
+      background-color: var(--background-color);
+      color: #fff;
+      border-radius: 25px;
+      transition: 0.3s ease;
+
+      & span:first-of-type{
+        padding: 2px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: var(--background-color);
+        margin-right: 10px;
+      }
+    }
+    .btn:hover{
+      background-color: var(--mainColor);
+      & span:first-of-type{
+        color: var(--mainColor);
+      }
+    }
+
+
+.show-special-doctors .head{
+    width: 100%;
+    margin: 30px 0;
+    color: #687390;
+    font-size: 15px;
+}
